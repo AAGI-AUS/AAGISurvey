@@ -5,13 +5,13 @@ Authors@R: c(
     person("Rose", "Megirian", , "rose.megirian@curtin.edu.au", role = "aut"),
     person("Adam", "Sparks", , "adam.sparks@curtin.edu.au", role = c("aut", "cre"))
   )
-Description: What the package does (one paragraph).
-License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
-    license
+Description: Create 'AAGI' service and support survey URLs interactively or
+    scripted for sharing with partners.
+License: MIT + file LICENSE
 Imports:
     cli,
     clipr,
-    purrr
+    rlang 
 Suggests: 
     roxyglobals
 Config/Needs/build: moodymudskipper/devtag
