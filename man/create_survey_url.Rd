@@ -22,7 +22,7 @@ You may choose both.}
 
 \item{design_type}{Character string of design type. Required if "S_D" is
 selected for \code{support_type}. Options are:
-\describe={
+\describe{
 \item{"D_SP"}{Small plot trial design},
 \item{"D_OFE"}{On farm experiment design},
 \item{"D_GH"}{Glasshouse experiment design},
@@ -33,7 +33,7 @@ selected for \code{support_type}. Options are:
 
 \item{analysis_type}{Character string of analysis type. Required if "S_A" is
 selected for \code{support_type}. Options are:
-\describe={
+\describe{
 \item{"A_SP"}{Small plot trial data analysis},
 \item{"A_OFE"}{On farm experiment data analysis},
 \item{"A_PRO"}{Protected environment experiment data analysis (glasshouse
@@ -51,8 +51,9 @@ or growth chamber)},
 \item{"CU"}{Curtin University},
 \item{"UA"}{University of Adelaide},
 \item{"UQ"}{University of Queensland}.
-}
-@param organisation_type Character string of organisation type. Options are:
+}}
+
+\item{organisation_type}{Character string of organisation type. Options are:
 \describe{
 \item{"O_GRO"}{Grower group, industry association, or farm cooperative},
 \item{"O_AGR"}{Agronomy or farm advisory practice},
@@ -74,6 +75,7 @@ script it or use interactively and run the function answering a menu-driven
 set of questions to generate the URL.
 }
 \examples{
+\dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 # create a survey URL for design and analysis performed on small plots for
 # a government agency or department performed by CU
 create_survey_url(support_type = c("S_D", "S_A"),
@@ -88,4 +90,5 @@ create_survey_url(support_type = "S_A",
                   analysis_type = "A_BIO",
                   aagi_node = "UA",
                   organisation_type = "O_ACA")
+\dontshow{\}) # examplesIf}
 }
