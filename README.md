@@ -1,6 +1,10 @@
 # AAGISurvey
 
-## A collection of helper functions for small-plot trial analysis using ASReml
+<!-- badges: start -->
+
+[![R-CMD-check](https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml)
+
+<!-- badges: end -->
 
 ## Installation instructions
 
