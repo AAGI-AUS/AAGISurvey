@@ -57,7 +57,7 @@
 #' # a government agency or department performed by CU
 #' create_survey_url(support_type = c("S_D", "S_A"),
 #'                   design_type = "D_SP",
-#'                   aanalysis_type = "A_SP",
+#'                   analysis_type = "A_SP",
 #'                   aagi_node = "CU",
 #'                   organisation_type = "O_GOV")
 #'
