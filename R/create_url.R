@@ -13,7 +13,7 @@
 #' You may choose both.
 #' @param design_type Character string of design type. Required if "S_D" is
 #'  selected for `support_type`. Options are:
-#'  \describe={
+#'  \describe{
 #'      \item{"D_SP"}{Small plot trial design},
 #'      \item{"D_OFE"}{On farm experiment design},
 #'      \item{"D_GH"}{Glasshouse experiment design},
@@ -23,7 +23,7 @@
 #'   }
 #' @param analysis_type Character string of analysis type. Required if "S_A" is
 #'  selected for `support_type`. Options are:
-#'  \describe={
+#'  \describe{
 #'    \item{"A_SP"}{Small plot trial data analysis},
 #'    \item{"A_OFE"}{On farm experiment data analysis},
 #'    \item{"A_PRO"}{Protected environment experiment data analysis (glasshouse
@@ -41,7 +41,7 @@
 #'   \item{"UA"}{University of Adelaide},
 #'   \item{"UQ"}{University of Queensland}.
 #'  }
-#'  @param organisation_type Character string of organisation type. Options are:
+#' @param organisation_type Character string of organisation type. Options are:
 #'  \describe{
 #'  \item{"O_GRO"}{Grower group, industry association, or farm cooperative},
 #'  \item{"O_AGR"}{Agronomy or farm advisory practice},
@@ -52,7 +52,7 @@
 #'  \item{"O_OTHER"}{Other type to be selected by recipient}.
 #' }
 #'
-#' @examples
+#' @examplesIf interactive()
 #' # create a survey URL for design and analysis performed on small plots for
 #' # a government agency or department performed by CU
 #' create_survey_url(support_type = c("S_D", "S_A"),
@@ -227,7 +227,7 @@ create_survey_url <- function(
   cli::cli_end()
   cli::cli_par()
   cli::cli_text(
-    "Best practice: send a survey 7–10 days after each set of outputs rather than combining feedback."
+    "Best practice: send a survey 7-10 days after each set of outputs rather than combining feedback."
   )
   cli::cli_end()
   cli::cli_par()
