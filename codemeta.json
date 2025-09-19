@@ -1,0 +1,91 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "SoftwareSourceCode",
+  "identifier": "AAGISurvey",
+  "description": "What the package does (one paragraph).",
+  "name": "AAGISurvey: Create AAGI Survey URLs and Analyse AAGI Survey Results",
+  "license": "`use_mit_license()`, `use_gpl3_license()` or friends to pick a\n    license",
+  "version": "0.0.0.9000",
+  "programmingLanguage": {
+    "@type": "ComputerLanguage",
+    "name": "R",
+    "url": "https://r-project.org"
+  },
+  "runtimePlatform": "R version 4.5.1 (2025-06-13)",
+  "author": [
+    {
+      "@type": "Person",
+      "givenName": "Rose",
+      "familyName": "Megirian",
+      "email": "rose.megirian@curtin.edu.au"
+    },
+    {
+      "@type": "Person",
+      "givenName": "Adam",
+      "familyName": "Sparks",
+      "email": "adam.sparks@curtin.edu.au"
+    }
+  ],
+  "maintainer": [
+    {
+      "@type": "Person",
+      "givenName": "Adam",
+      "familyName": "Sparks",
+      "email": "adam.sparks@curtin.edu.au"
+    }
+  ],
+  "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "roxyglobals",
+      "name": "roxyglobals",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=roxyglobals"
+    }
+  ],
+  "softwareRequirements": {
+    "1": {
+      "@type": "SoftwareApplication",
+      "identifier": "cli",
+      "name": "cli",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=cli"
+    },
+    "2": {
+      "@type": "SoftwareApplication",
+      "identifier": "clipr",
+      "name": "clipr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=clipr"
+    },
+    "3": {
+      "@type": "SoftwareApplication",
+      "identifier": "purrr",
+      "name": "purrr",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=purrr"
+    },
+    "SystemRequirements": null
+  },
+  "fileSize": "0KB"
+}

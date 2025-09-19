@@ -1,0 +1,23 @@
+Package: AAGISurvey
+Title: Create AAGI Survey URLs and Analyse AAGI Survey Results
+Version: 0.0.0.9000
+Authors@R: c(
+    person("Rose", "Megirian", , "rose.megirian@curtin.edu.au", role = "aut"),
+    person("Adam", "Sparks", , "adam.sparks@curtin.edu.au", role = c("aut", "cre"))
+  )
+Description: What the package does (one paragraph).
+License: `use_mit_license()`, `use_gpl3_license()` or friends to pick a
+    license
+Imports:
+    cli,
+    clipr,
+    purrr
+Suggests: 
+    roxyglobals
+Config/Needs/build: moodymudskipper/devtag
+Config/roxyglobals/filename: globals.R
+Config/roxyglobals/unique: FALSE
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE, roclets = c("collate", "namespace", "rd",
+    "roxyglobals::global_roclet", "devtag::dev_roclet"))
+RoxygenNote: 7.3.3
