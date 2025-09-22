@@ -1,5 +1,5 @@
-# Workflow derived from https://github.com/r-lib/actions/tree/master/examples
-# Need help debugging build failures? Start at https://github.com/r-lib/actions#where-to-find-help
+# Workflow derived from https://github.com/mdlincoln/clipr/blob/main/.github/workflows/R-CMD-check.yaml
+
 on:
   push:
     branches: [main, actions]
@@ -18,44 +18,44 @@ jobs:
       fail-fast: false
       matrix:
         config:
-          - { os: macOS-latest, r: 'release', allow_clip: TRUE }
-          - { os: windows-latest, r: 'release', allow_clip: TRUE }
-          - { os: windows-latest, r: 'devel', allow_clip: TRUE }
+          - { os: macOS-latest, r: "release", allow_clip: TRUE }
+          - { os: windows-latest, r: "release", allow_clip: TRUE }
+          - { os: windows-latest, r: "devel", allow_clip: TRUE }
           - {
               os: ubuntu-latest,
-              r: 'devel',
-              http-user-agent: 'release',
+              r: "devel",
+              http-user-agent: "release",
               allow_clip: TRUE,
               clip_type: xclip,
             }
           - {
               os: ubuntu-latest,
-              r: 'release',
+              r: "release",
               allow_clip: TRUE,
               clip_type: xclip,
             }
           - {
               os: ubuntu-latest,
-              r: 'release',
+              r: "release",
               allow_clip: TRUE,
               clip_type: xsel,
             }
-          - { os: ubuntu-latest, r: 'release', clip_type: xsel }
+          - { os: ubuntu-latest, r: "release", clip_type: xsel }
           - {
               os: ubuntu-latest,
-              r: 'release',
+              r: "release",
               allow_clip: TRUE,
               clip_type: none,
             }
           - {
               os: ubuntu-latest,
-              r: 'release',
+              r: "release",
               allow_clip: TRUE,
               clip_type: nodisplay,
             }
           - {
               os: ubuntu-latest,
-              r: 'oldrel-1',
+              r: "oldrel-1",
               allow_clip: TRUE,
               clip_type: xclip,
             }
@@ -82,7 +82,7 @@ jobs:
           uptime | xclip -i -sel p -f | xclip -i -sel c
           xclip -o -sel clipboard
         env:
-          DISPLAY: ':99.0'
+          DISPLAY: ":99.0"
 
       - name: Install xclip (nodisplay)
         if: ${{ matrix.config.clip_type == 'nodisplay' }}
@@ -111,7 +111,7 @@ jobs:
         env:
           ALLOW_CLIP: ${{ matrix.config.allow_clip }}
           CLIP_TYPE: ${{ matrix.config.clip_type }}
-          DISPLAY: ':99.0'
+          DISPLAY: ":99.0"
 
       - uses: r-lib/actions/check-r-package@v1
         if: ${{ matrix.config.clip_type == 'nodisplay' }}
