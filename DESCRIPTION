@@ -14,7 +14,8 @@ Imports:
     clipr,
     rlang
 Suggests: 
-    roxyglobals
+    roxyglobals,
+    testthat (>= 3.0.0)
 Config/Needs/build: moodymudskipper/devtag
 Config/roxyglobals/filename: globals.R
 Config/roxyglobals/unique: FALSE
@@ -22,3 +23,4 @@ Encoding: UTF-8
 Roxygen: list(markdown = TRUE, roclets = c("collate", "namespace", "rd",
     "roxyglobals::global_roclet", "devtag::dev_roclet"))
 RoxygenNote: 7.3.3
+Config/testthat/edition: 3
