@@ -15,8 +15,8 @@ create_survey_url(
 \arguments{
 \item{support_type}{Character vector of support types. Options are:
 \describe{
-\item{S_D}{Experimental design support}
-\item{S_A}{Analysis support}.
+\item{"S_D"}{Experimental design support}
+\item{"S_A"}{Analysis support}.
 }
 You may choose both.}
 

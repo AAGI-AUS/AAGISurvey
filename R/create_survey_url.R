@@ -7,8 +7,8 @@
 #'
 #' @param support_type Character vector of support types. Options are:
 #'  \describe{
-#'    \item{S_D}{Experimental design support}
-#'    \item{S_A}{Analysis support}.
+#'    \item{"S_D"}{Experimental design support}
+#'    \item{"S_A"}{Analysis support}.
 #'    }
 #' You may choose both.
 #' @param design_type Character string of design type. Required if "S_D" is
