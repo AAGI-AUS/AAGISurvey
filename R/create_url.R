@@ -232,7 +232,7 @@ create_survey_url <- function(
   cli::cli_end()
   cli::cli_par()
   cli::cli_text(
-    "The URL has been copied to your clipboard for you to paste in your e-mail to your partners"
+    "The URL has been copied to your clipboard for you to paste in your e-mail to your partners."
   )
   cli::cli_end()
   copy_to_clip(x = survey_url)
