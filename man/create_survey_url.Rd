@@ -92,3 +92,7 @@ create_survey_url(support_type = "S_A",
                   organisation_type = "O_ACA")
 \dontshow{\}) # examplesIf}
 }
+\author{
+Rose Megirian, \email{rose.megirian@curtin.edu.au} and Adam H.
+Sparks, \email{adam.sparks@curtin.edu.au}
+}

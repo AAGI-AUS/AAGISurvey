@@ -67,10 +67,12 @@
 #'                   analysis_type = "A_BIO",
 #'                   aagi_node = "UA",
 #'                   organisation_type = "O_ACA")
-#' @export
-#' @return The full survey URL to the OS clipboard (invisibly). Prints a summary
+#' @author Rose Megirian, \email{rose.megirian@@curtin.edu.au} and Adam H.
+#'  Sparks, \email{adam.sparks@@curtin.edu.au}
+#' @returns The full survey URL to the OS clipboard (invisibly). Prints a summary
 #'  for convenience.
 #' @autoglobal
+#' @export
 
 create_survey_url <- function(
   support_type = NULL,
