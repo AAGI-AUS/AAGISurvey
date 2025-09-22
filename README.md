@@ -14,6 +14,9 @@ To get started:
 
 ### Enable this universe
 
+Note that you only need to do this once.
+If you have done this before for another AAGI package, you can skip this step.
+
 ```r
 options(repos = c(
     aagi_aus = 'https://aagi-aus.r-universe.dev',
