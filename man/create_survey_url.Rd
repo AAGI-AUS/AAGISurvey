@@ -65,8 +65,8 @@ or growth chamber)},
 }}
 }
 \value{
-The full survey URL to the OS clipboard (invisibly). Prints a summary
-for convenience.
+The full survey URL to the OS clipboard (invisibly). Prints a
+summary for convenience.
 }
 \description{
 An interactive menu-driven function to generate a URL for sharing a survey

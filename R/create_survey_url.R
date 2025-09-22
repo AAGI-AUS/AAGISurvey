@@ -69,8 +69,8 @@
 #'                   organisation_type = "O_ACA")
 #' @author Rose Megirian, \email{rose.megirian@@curtin.edu.au} and Adam H.
 #'  Sparks, \email{adam.sparks@@curtin.edu.au}
-#' @returns The full survey URL to the OS clipboard (invisibly). Prints a summary
-#'  for convenience.
+#' @returns The full survey URL to the OS clipboard (invisibly). Prints a
+#'  summary for convenience.
 #' @autoglobal
 #' @export
 
@@ -116,55 +116,6 @@ create_survey_url <- function(
     O_TEC = "Tech, biotech, or chemical company",
     O_OTHER = "Other"
   )
-
-  pick_codes <- function(dict, title, multiple = FALSE) {
-    if (isFALSE(rlang::is_interactive())) {
-      cli::cli_abort(
-        "Missing required value for {title} in non-interactive session."
-      )
-    }
-    sel <- utils::select.list(unname(dict), title = title, multiple = multiple)
-    if (!any(nzchar(sel))) {
-      return(character())
-    }
-    names(dict)[match(sel, dict)]
-  }
-
-  ensure_valid <- function(vals, allowed, field) {
-    if (is.null(vals)) {
-      return()
-    }
-    bad <- setdiff(vals, names(allowed))
-    if (length(bad)) {
-      cli::cli_abort(
-        "Invalid {field}: {bad}"
-      )
-    }
-  }
-
-  build_url <- function(
-    base,
-    support_type,
-    design_type,
-    analysis_type,
-    aagi_node,
-    organisation_type
-  ) {
-    params <- list(
-      ST = paste(support_type, collapse = ","),
-      DT = design_type %||% "",
-      AT = analysis_type %||% "",
-      AN = aagi_node %||% "",
-      OT = organisation_type %||% ""
-    )
-    query <- paste(
-      names(params),
-      vapply(params, utils::URLencode, character(1L), reserved = TRUE),
-      sep = "=",
-      collapse = "&"
-    )
-    paste0(base, "?", query)
-  }
 
   # ---- Validate inputs ----
   ensure_valid(support_type, SUPPORT, "support_type")
@@ -239,4 +190,94 @@ create_survey_url <- function(
   cli::cli_end()
   copy_to_clip(x = survey_url)
   invisible(survey_url)
+}
+
+#' Pick and match codes from a named character vector
+#'
+#' Ensures that all necessary values are provided and prompts for a response if
+#'  they are not.
+#'
+#' @returns A character vector of the selected codes.
+#' @dev
+
+pick_codes <- function(dict, title, multiple = FALSE) {
+  if (isFALSE(rlang::is_interactive())) {
+    cli::cli_abort(
+      "Missing required value for {title} in non-interactive session."
+    )
+  }
+  sel <- utils::select.list(unname(dict), title = title, multiple = multiple)
+  if (!any(nzchar(sel))) {
+    return(character())
+  }
+  names(dict)[match(sel, dict)]
+}
+
+#' Validate user inputs
+#'
+#' @param vals Character vector of user inputs.
+#' @param allowed Named character vector of allowed values.
+#' @param field Character string of field name for error messages.
+#'
+#' @returns `NULL` invisibly if all values are valid, otherwise throws an
+#'  informative error.
+#' @dev
+
+ensure_valid <- function(vals, allowed, field) {
+  if (is.null(vals)) {
+    return()
+  }
+  bad <- setdiff(vals, names(allowed))
+  if (length(bad)) {
+    cli::cli_abort(
+      "Invalid {field}: {bad}"
+    )
+  }
+  return(invisible(NULL))
+}
+
+#' Create the URL string from user provided values
+#'
+#' Create the URL string from user provided values for returning to the user.
+#'
+#' @param base Character string of base URL.
+#' @param support_type Character vector of support types.
+#' @param design_type Character string of design type.
+#' @param analysis_type Character string of analysis type.
+#' @param aagi_node Character string of AAGI node.
+#' @param organisation_type Character string of organisation type.
+#'
+#' @examples
+#' build_url("https://curtin.au1.qualtrics.com/jfe/form/SV_eXLvfgMz58RktQa",
+#'           "S_D",
+#'           "D_SP",
+#'           "CU",
+#'           "O_ACA"
+#'           )
+#'
+#' @dev
+#' @returns The full URL string.
+
+build_url <- function(
+  base,
+  support_type,
+  design_type,
+  analysis_type,
+  aagi_node,
+  organisation_type
+) {
+  params <- list(
+    ST = paste(support_type, collapse = ","),
+    DT = design_type %||% "",
+    AT = analysis_type %||% "",
+    AN = aagi_node %||% "",
+    OT = organisation_type %||% ""
+  )
+  query <- paste(
+    names(params),
+    vapply(params, utils::URLencode, character(1L), reserved = TRUE),
+    sep = "=",
+    collapse = "&"
+  )
+  sprintf("%s?%s", base, query)
 }

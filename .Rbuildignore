@@ -6,3 +6,6 @@
 ^pkgdown$
 ^\.github$
 ^man/copy_to_clip\.Rd$
+^man/pick_codes\.Rd$
+^man/ensure_valid\.Rd$
+^man/build_url\.Rd$
