@@ -23,7 +23,8 @@
       "@type": "Person",
       "givenName": "Adam",
       "familyName": "Sparks",
-      "email": "adam.sparks@curtin.edu.au"
+      "email": "adam.sparks@curtin.edu.au",
+      "@id": "https://orcid.org/0000-0002-0061-8359"
     }
   ],
   "maintainer": [
@@ -31,7 +32,8 @@
       "@type": "Person",
       "givenName": "Adam",
       "familyName": "Sparks",
-      "email": "adam.sparks@curtin.edu.au"
+      "email": "adam.sparks@curtin.edu.au",
+      "@id": "https://orcid.org/0000-0002-0061-8359"
     }
   ],
   "softwareSuggestions": [
@@ -87,7 +89,7 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "14.879KB",
+  "fileSize": "14.987KB",
   "codeRepository": "https://github.com/AAGI-AUS/AAGISurvey",
   "readme": "https://github.com/AAGI-AUS/AAGISurvey/blob/main/README.md",
   "contIntegration": "https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml",
