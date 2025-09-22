@@ -3,15 +3,16 @@ Title: Create AAGI Survey URLs and Analyse AAGI Survey Results
 Version: 0.0.0.9000
 Authors@R: c(
     person("Rose", "Megirian", , "rose.megirian@curtin.edu.au", role = "aut"),
-    person("Adam", "Sparks", , "adam.sparks@curtin.edu.au", role = c("aut", "cre"))
+    person("Adam", "Sparks", , "adam.sparks@curtin.edu.au", role = c("aut", "cre"),
+           comment = c(ORCID = "0000-0002-0061-8359"))
   )
-Description: Create 'AAGI' service and support survey URLs interactively or
-    scripted for sharing with partners.
+Description: Create 'AAGI' service and support survey URLs interactively
+    or scripted for sharing with partners.
 License: MIT + file LICENSE
 Imports:
     cli,
     clipr,
-    rlang 
+    rlang
 Suggests: 
     roxyglobals
 Config/Needs/build: moodymudskipper/devtag

@@ -9,7 +9,7 @@
 Create 'AAGI' service and support survey URLs interactively or scripted for sharing with partners.
 }
 \author{
-\strong{Maintainer}: Adam Sparks \email{adam.sparks@curtin.edu.au}
+\strong{Maintainer}: Adam Sparks \email{adam.sparks@curtin.edu.au} (\href{https://orcid.org/0000-0002-0061-8359}{ORCID})
 
 Authors:
 \itemize{
