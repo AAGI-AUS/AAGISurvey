@@ -1,8 +1,8 @@
 ^codemeta\.json$
 ^CODE_OF_CONDUCT\.md$
 ^LICENSE\.md$
-^man/copy_to_clip\.Rd$
 ^_pkgdown\.yml$
 ^docs$
 ^pkgdown$
 ^\.github$
+^man/copy_to_clip\.Rd$
