@@ -8,7 +8,7 @@
 
 ## Installation instructions
 
-{AAGISurvey} is available through the [R-Universe](https://aagi-aus.r-universe.dev/packages) with pre-built binaries (this is the easy way).
+{AAGISurvey} is available through the [R-Universe](https://aagi-aus.r-universe.dev/packages) with pre-built binaries that will install as if it was available from CRAN.
 
 To get started:
 
