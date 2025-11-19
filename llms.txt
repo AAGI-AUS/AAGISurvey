@@ -32,8 +32,8 @@ Currently {AAGISurvey} only contains one function,
 which creates a URL that links to a Qualtrics survey for you to send to
 AAGI Service and Support partners for completion.
 
-Creation of the URL can be either scripted where you provide all of of
-the necessary arguments to the
+Creation of the URL can be either scripted where you provide all the
+necessary arguments to the
 [`create_survey_url()`](https://AAGI-AUS.github.io/AAGISurvey/reference/create_survey_url.md)
 or interactively through a menu-driven options system. The menu will
 step through the needed arguments and provide help text for each. At the
@@ -52,7 +52,7 @@ All contributions are appreciated, but please make sure to follow the
 [Contribution
 Guidelines](https://AAGI-AUS.github.io/AAGISurvey/CONTRIBUTING.md).
 
-### Getting Started
+### Getting Started with Contributions
 
 1.  Clone the repository to your local machine using:
 
