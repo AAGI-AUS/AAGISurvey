@@ -73,23 +73,23 @@ set of questions to generate the URL.</p>
 <dt id="arg-design-type">design_type<a class="anchor" aria-label="anchor" href="#arg-design-type"></a></dt>
 <dd><p>Character string of design type. Required if "S_D" is
 selected for <code>support_type</code>. Options are:</p><dl><dt>"D_SP"</dt>
-<dd><p>Small plot trial design</p></dd>
-,
+<dd><p>Small plot trial design,</p></dd>
+
 <dt>"D_OFE"</dt>
-<dd><p>On farm experiment design</p></dd>
-,
+<dd><p>On farm experiment design,</p></dd>
+
 <dt>"D_GH"</dt>
-<dd><p>Glasshouse experiment design</p></dd>
-,
+<dd><p>Glasshouse experiment design,</p></dd>
+
 <dt>"D_GC"</dt>
-<dd><p>Growth chamber experiment design</p></dd>
-,
+<dd><p>Growth chamber experiment design,</p></dd>
+
 <dt>"D_LAB"</dt>
-<dd><p>Lab experiment design</p></dd>
-,
+<dd><p>Lab experiment design,</p></dd>
+
 <dt>"D_OTHER"</dt>
-<dd><p>Other type to be selected by recipient</p></dd>
-.
+<dd><p>Other type to be selected by recipient.</p></dd>
+
 
 </dl></dd>
 
@@ -97,73 +97,73 @@ selected for <code>support_type</code>. Options are:</p><dl><dt>"D_SP"</dt>
 <dt id="arg-analysis-type">analysis_type<a class="anchor" aria-label="anchor" href="#arg-analysis-type"></a></dt>
 <dd><p>Character string of analysis type. Required if "S_A" is
 selected for <code>support_type</code>. Options are:</p><dl><dt>"A_SP"</dt>
-<dd><p>Small plot trial data analysis</p></dd>
-,
+<dd><p>Small plot trial data analysis,</p></dd>
+
 <dt>"A_OFE"</dt>
-<dd><p>On farm experiment data analysis</p></dd>
-,
+<dd><p>On farm experiment data analysis,</p></dd>
+
 <dt>"A_PRO"</dt>
 <dd><p>Protected environment experiment data analysis (glasshouse
-or growth chamber)</p></dd>
-,
+or growth chamber),</p></dd>
+
 <dt>"A_BIO"</dt>
-<dd><p>Bioinformatics or genetic data</p></dd>
-,
+<dd><p>Bioinformatics or genetic data,</p></dd>
+
 <dt>"A_BRE"</dt>
-<dd><p>Breeding or selection program data</p></dd>
-,
+<dd><p>Breeding or selection program data,</p></dd>
+
 <dt>"A_ENV"</dt>
-<dd><p>Environmental or geospatial data</p></dd>
-,
+<dd><p>Environmental or geospatial data,</p></dd>
+
 <dt>"A_IMG"</dt>
-<dd><p>Imagery data</p></dd>
-,
+<dd><p>Imagery data,</p></dd>
+
 <dt>"A_REC"</dt>
-<dd><p>Farm records or monitoring data</p></dd>
-,
+<dd><p>Farm records or monitoring data,</p></dd>
+
 <dt>"A_OTHER"</dt>
-<dd><p>Other type to be selected by recipient</p></dd>
-.
+<dd><p>Other type to be selected by recipient.</p></dd>
+
 
 </dl></dd>
 
 
 <dt id="arg-aagi-node">aagi_node<a class="anchor" aria-label="anchor" href="#arg-aagi-node"></a></dt>
 <dd><p>Character string of AAGI node. Options are:</p><dl><dt>"CU"</dt>
-<dd><p>Curtin University</p></dd>
-,
+<dd><p>Curtin University,</p></dd>
+
 <dt>"UA"</dt>
-<dd><p>University of Adelaide</p></dd>
-,
+<dd><p>University of Adelaide,</p></dd>
+
 <dt>"UQ"</dt>
-<dd><p>University of Queensland</p></dd>
-.
+<dd><p>University of Queensland.</p></dd>
+
 
 </dl></dd>
 
 
 <dt id="arg-organisation-type">organisation_type<a class="anchor" aria-label="anchor" href="#arg-organisation-type"></a></dt>
 <dd><p>Character string of organisation type. Options are:</p><dl><dt>"O_GRO"</dt>
-<dd><p>Grower group, industry association, or farm cooperative</p></dd>
-,
+<dd><p>Grower group, industry association, or farm cooperative,</p></dd>
+
 <dt>"O_AGR"</dt>
-<dd><p>Agronomy or farm advisory practice</p></dd>
-,
+<dd><p>Agronomy or farm advisory practice,</p></dd>
+
 <dt>"O_ACA"</dt>
-<dd><p>Academic institution</p></dd>
-,
+<dd><p>Academic institution,</p></dd>
+
 <dt>"O_GOV"</dt>
-<dd><p>Government agency or department</p></dd>
-,
+<dd><p>Government agency or department,</p></dd>
+
 <dt>"O_BRE"</dt>
-<dd><p>Seed or breeding company</p></dd>
-,
+<dd><p>Seed or breeding company,</p></dd>
+
 <dt>"O_TEC"</dt>
-<dd><p>Tech, biotech, or chemical company</p></dd>
-,
+<dd><p>Tech, biotech, or chemical company,</p></dd>
+
 <dt>"O_OTHER"</dt>
-<dd><p>Other type to be selected by recipient</p></dd>
-.
+<dd><p>Other type to be selected by recipient.</p></dd>
+
 
 </dl></dd>
 
@@ -184,18 +184,22 @@ Sparks, <a href="mailto:adam.sparks@curtin.edu.au">adam.sparks@curtin.edu.au</a>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># interactive()</span></span></span>
 <span class="r-in"><span><span class="co"># create a survey URL for design and analysis performed on small plots for</span></span></span>
 <span class="r-in"><span><span class="co"># a government agency or department performed by CU</span></span></span>
-<span class="r-in"><span><span class="fu">create_survey_url</span><span class="op">(</span>support_type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"S_D"</span>, <span class="st">"S_A"</span><span class="op">)</span>,</span></span>
-<span class="r-in"><span>                  design_type <span class="op">=</span> <span class="st">"D_SP"</span>,</span></span>
-<span class="r-in"><span>                  analysis_type <span class="op">=</span> <span class="st">"A_SP"</span>,</span></span>
-<span class="r-in"><span>                  aagi_node <span class="op">=</span> <span class="st">"CU"</span>,</span></span>
-<span class="r-in"><span>                  organisation_type <span class="op">=</span> <span class="st">"O_GOV"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">create_survey_url</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  support_type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"S_D"</span>, <span class="st">"S_A"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  design_type <span class="op">=</span> <span class="st">"D_SP"</span>,</span></span>
+<span class="r-in"><span>  analysis_type <span class="op">=</span> <span class="st">"A_SP"</span>,</span></span>
+<span class="r-in"><span>  aagi_node <span class="op">=</span> <span class="st">"CU"</span>,</span></span>
+<span class="r-in"><span>  organisation_type <span class="op">=</span> <span class="st">"O_GOV"</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># create a survey URL for a bioinformatics analysis for an academic</span></span></span>
 <span class="r-in"><span><span class="co"># institution performed by UA</span></span></span>
-<span class="r-in"><span><span class="fu">create_survey_url</span><span class="op">(</span>support_type <span class="op">=</span> <span class="st">"S_A"</span>,</span></span>
-<span class="r-in"><span>                  analysis_type <span class="op">=</span> <span class="st">"A_BIO"</span>,</span></span>
-<span class="r-in"><span>                  aagi_node <span class="op">=</span> <span class="st">"UA"</span>,</span></span>
-<span class="r-in"><span>                  organisation_type <span class="op">=</span> <span class="st">"O_ACA"</span><span class="op">)</span></span></span>
+<span class="r-in"><span><span class="fu">create_survey_url</span><span class="op">(</span></span></span>
+<span class="r-in"><span>  support_type <span class="op">=</span> <span class="st">"S_A"</span>,</span></span>
+<span class="r-in"><span>  analysis_type <span class="op">=</span> <span class="st">"A_BIO"</span>,</span></span>
+<span class="r-in"><span>  aagi_node <span class="op">=</span> <span class="st">"UA"</span>,</span></span>
+<span class="r-in"><span>  organisation_type <span class="op">=</span> <span class="st">"O_ACA"</span></span></span>
+<span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
 </code></pre></div>
     </div>
@@ -208,7 +212,7 @@ Sparks, <a href="mailto:adam.sparks@curtin.edu.au">adam.sparks@curtin.edu.au</a>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.3.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer></div>
