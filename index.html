@@ -84,6 +84,41 @@
 <h2 id="contributions">Contributions<a class="anchor" aria-label="anchor" href="#contributions"></a>
 </h2>
 <p>All contributions are appreciated, but please make sure to follow the <a href="CONTRIBUTING.html">Contribution Guidelines</a>.</p>
+<div class="section level3">
+<h3 id="getting-started">Getting Started<a class="anchor" aria-label="anchor" href="#getting-started"></a>
+</h3>
+<ol style="list-style-type: decimal">
+<li>
+<p>Clone the repository to your local machine using:</p>
+<div class="sourceCode" id="cb4"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="fu">git</span> clone https://github.com/AAGI-AUS/AAGISurvey.git</span></code></pre></div>
+</li>
+<li>
+<p>Navigate to the project directory:</p>
+<div class="sourceCode" id="cb5"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">cd</span> AAGISurvey</span></code></pre></div>
+</li>
+<li><p>Make some edits to the .R files in the R/ directory.</p></li>
+<li>
+<p>Test your changes by running:</p>
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">load_all</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+<p>and testing your new functionality.</p>
+</li>
+<li>
+<p>If you are adding new functions, make sure to document them using Roxygen2 comments and generate the documentation with:</p>
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">devtools</span><span class="fu">::</span><span class="fu">document</span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
+</li>
+<li>
+<p>When you are satisfied with your changes, commit them to your local repository:</p>
+<div class="sourceCode" id="cb8"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="fu">git</span> add .</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="fu">git</span> commit <span class="at">-m</span> <span class="st">"Describe your changes here"</span></span></code></pre></div>
+</li>
+<li>
+<p>Push your changes to the repository:</p>
+<div class="sourceCode" id="cb9"><pre class="sourceCode bash"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">git</span> push</span></code></pre></div>
+</li>
+</ol>
+</div>
 </div>
 </div>
 

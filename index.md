@@ -51,3 +51,48 @@ create_survey_url()
 All contributions are appreciated, but please make sure to follow the
 [Contribution
 Guidelines](https://AAGI-AUS.github.io/AAGISurvey/CONTRIBUTING.md).
+
+### Getting Started
+
+1.  Clone the repository to your local machine using:
+
+    ``` bash
+    git clone https://github.com/AAGI-AUS/AAGISurvey.git
+    ```
+
+2.  Navigate to the project directory:
+
+    ``` bash
+    cd AAGISurvey
+    ```
+
+3.  Make some edits to the .R files in the R/ directory.
+
+4.  Test your changes by running:
+
+    ``` r
+    devtools::load_all()
+    ```
+
+    and testing your new functionality.
+
+5.  If you are adding new functions, make sure to document them using
+    Roxygen2 comments and generate the documentation with:
+
+    ``` r
+    devtools::document()
+    ```
+
+6.  When you are satisfied with your changes, commit them to your local
+    repository:
+
+    ``` bash
+    git add .
+    git commit -m "Describe your changes here"
+    ```
+
+7.  Push your changes to the repository:
+
+    ``` bash
+    git push
+    ```
