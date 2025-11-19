@@ -5,6 +5,8 @@
 ^docs$
 ^pkgdown$
 ^\.github$
+^.*\.Rproj$
+^\.Rproj\.user$
 ^man/copy_to_clip\.Rd$
 ^man/pick_codes\.Rd$
 ^man/ensure_valid\.Rd$
