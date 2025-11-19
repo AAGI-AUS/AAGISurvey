@@ -23,45 +23,45 @@ You may choose both.}
 \item{design_type}{Character string of design type. Required if "S_D" is
 selected for \code{support_type}. Options are:
 \describe{
-\item{"D_SP"}{Small plot trial design},
-\item{"D_OFE"}{On farm experiment design},
-\item{"D_GH"}{Glasshouse experiment design},
-\item{"D_GC"}{Growth chamber experiment design},
-\item{"D_LAB"}{Lab experiment design},
-\item{"D_OTHER"}{Other type to be selected by recipient}.
+\item{"D_SP"}{Small plot trial design,}
+\item{"D_OFE"}{On farm experiment design,}
+\item{"D_GH"}{Glasshouse experiment design,}
+\item{"D_GC"}{Growth chamber experiment design,}
+\item{"D_LAB"}{Lab experiment design,}
+\item{"D_OTHER"}{Other type to be selected by recipient.}
 }}
 
 \item{analysis_type}{Character string of analysis type. Required if "S_A" is
 selected for \code{support_type}. Options are:
 \describe{
-\item{"A_SP"}{Small plot trial data analysis},
-\item{"A_OFE"}{On farm experiment data analysis},
+\item{"A_SP"}{Small plot trial data analysis,}
+\item{"A_OFE"}{On farm experiment data analysis,}
 \item{"A_PRO"}{Protected environment experiment data analysis (glasshouse
-or growth chamber)},
-\item{"A_BIO"}{Bioinformatics or genetic data},
-\item{"A_BRE"}{Breeding or selection program data},
-\item{"A_ENV"}{Environmental or geospatial data},
-\item{"A_IMG"}{Imagery data},
-\item{"A_REC"}{Farm records or monitoring data},
-\item{"A_OTHER"}{Other type to be selected by recipient}.
+or growth chamber),}
+\item{"A_BIO"}{Bioinformatics or genetic data,}
+\item{"A_BRE"}{Breeding or selection program data,}
+\item{"A_ENV"}{Environmental or geospatial data,}
+\item{"A_IMG"}{Imagery data,}
+\item{"A_REC"}{Farm records or monitoring data,}
+\item{"A_OTHER"}{Other type to be selected by recipient.}
 }}
 
 \item{aagi_node}{Character string of AAGI node. Options are:
 \describe{
-\item{"CU"}{Curtin University},
-\item{"UA"}{University of Adelaide},
-\item{"UQ"}{University of Queensland}.
+\item{"CU"}{Curtin University,}
+\item{"UA"}{University of Adelaide,}
+\item{"UQ"}{University of Queensland.}
 }}
 
 \item{organisation_type}{Character string of organisation type. Options are:
 \describe{
-\item{"O_GRO"}{Grower group, industry association, or farm cooperative},
-\item{"O_AGR"}{Agronomy or farm advisory practice},
-\item{"O_ACA"}{Academic institution},
-\item{"O_GOV"}{Government agency or department},
-\item{"O_BRE"}{Seed or breeding company},
-\item{"O_TEC"}{Tech, biotech, or chemical company},
-\item{"O_OTHER"}{Other type to be selected by recipient}.
+\item{"O_GRO"}{Grower group, industry association, or farm cooperative,}
+\item{"O_AGR"}{Agronomy or farm advisory practice,}
+\item{"O_ACA"}{Academic institution,}
+\item{"O_GOV"}{Government agency or department,}
+\item{"O_BRE"}{Seed or breeding company,}
+\item{"O_TEC"}{Tech, biotech, or chemical company,}
+\item{"O_OTHER"}{Other type to be selected by recipient.}
 }}
 }
 \value{
@@ -78,18 +78,22 @@ set of questions to generate the URL.
 \dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 # create a survey URL for design and analysis performed on small plots for
 # a government agency or department performed by CU
-create_survey_url(support_type = c("S_D", "S_A"),
-                  design_type = "D_SP",
-                  analysis_type = "A_SP",
-                  aagi_node = "CU",
-                  organisation_type = "O_GOV")
+create_survey_url(
+  support_type = c("S_D", "S_A"),
+  design_type = "D_SP",
+  analysis_type = "A_SP",
+  aagi_node = "CU",
+  organisation_type = "O_GOV"
+)
 
 # create a survey URL for a bioinformatics analysis for an academic
 # institution performed by UA
-create_survey_url(support_type = "S_A",
-                  analysis_type = "A_BIO",
-                  aagi_node = "UA",
-                  organisation_type = "O_ACA")
+create_survey_url(
+  support_type = "S_A",
+  analysis_type = "A_BIO",
+  aagi_node = "UA",
+  organisation_type = "O_ACA"
+)
 \dontshow{\}) # examplesIf}
 }
 \author{

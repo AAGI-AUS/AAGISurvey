@@ -33,12 +33,13 @@ The full URL string.
 Create the URL string from user provided values for returning to the user.
 }
 \examples{
-build_url("https://curtin.au1.qualtrics.com/jfe/form/SV_eXLvfgMz58RktQa",
-          "S_D",
-          "D_SP",
-          "CU",
-          "O_ACA"
-          )
+build_url(
+  "https://curtin.au1.qualtrics.com/jfe/form/SV_eXLvfgMz58RktQa",
+  "S_D",
+  "D_SP",
+  "CU",
+  "O_ACA"
+)
 
 }
 \keyword{internal}
