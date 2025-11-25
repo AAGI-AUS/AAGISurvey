@@ -1,6 +1,6 @@
 Package: AAGISurvey
 Title: Create AAGI Survey URLs and Analyse AAGI Survey Results
-Version: 0.0.0.9000
+Version: 0.0.1
 Authors@R: c(
     person("Rose", "Megirian", , "rose.megirian@curtin.edu.au", role = "aut"),
     person("Adam", "Sparks", , "adam.sparks@curtin.edu.au", role = c("aut", "cre"),
