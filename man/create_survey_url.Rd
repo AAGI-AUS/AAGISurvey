@@ -13,7 +13,8 @@ create_survey_url(
 )
 }
 \arguments{
-\item{support_type}{Character vector specifying the type(s) of support being evaluated.
+\item{support_type}{Character vector specifying the type(s) of support being
+evaluated.
 You may choose one or both.
 Options are:
 \describe{
@@ -21,7 +22,8 @@ Options are:
 \item{"S_A"}{Analysis support}
 }}
 
-\item{design_type}{Character string specifying the type of experimental design (required if "S_D" is selected for \code{support_type}).
+\item{design_type}{Character string specifying the type of experimental
+design (required if "S_D" is selected for \code{support_type}).
 Options are:
 \describe{
 \item{"D_SP"}{Small plot trial design}
