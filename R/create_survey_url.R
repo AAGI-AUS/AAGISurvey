@@ -16,7 +16,8 @@
 #' through each field.
 #'
 #'
-#' @param support_type Character vector specifying the type(s) of support being evaluated.
+#' @param support_type Character vector specifying the type(s) of support being
+#' evaluated.
 #' You may choose one or both.
 #' Options are:
 #'   \describe{
@@ -24,7 +25,8 @@
 #'     \item{"S_A"}{Analysis support}
 #'   }
 #'
-#' @param design_type Character string specifying the type of experimental design (required if "S_D" is selected for `support_type`).
+#' @param design_type Character string specifying the type of experimental
+#' design (required if "S_D" is selected for `support_type`).
 #' Options are:
 #'   \describe{
 #'     \item{"D_SP"}{Small plot trial design}
@@ -101,11 +103,11 @@
 #' @export
 
 create_survey_url <- function(
-    support_type = NULL,
-    design_type = NULL,
-    analysis_type = NULL,
-    aagi_node = NULL,
-    organisation_type = NULL
+  support_type = NULL,
+  design_type = NULL,
+  analysis_type = NULL,
+  aagi_node = NULL,
+  organisation_type = NULL
 ) {
   # ---- Constants ----
   SUPPORT <- c(S_D = "Experimental design support", S_A = "Analysis support")
@@ -142,14 +144,14 @@ create_survey_url <- function(
     O_TEC = "Tech, biotech, or chemical company",
     O_OTHER = "Other"
   )
-  
+
   # ---- Validate inputs ----
   ensure_valid(support_type, SUPPORT, "support_type")
   ensure_valid(design_type, DESIGN, "design_type")
   ensure_valid(analysis_type, ANALYSIS, "analysis_type")
   ensure_valid(aagi_node, NODE, "aagi_node")
   ensure_valid(organisation_type, ORG, "organisation_type")
-  
+
   # ---- Interactive prompts for missing ----
   if (is.null(support_type) || (!all(nzchar(support_type)))) {
     support_type <- pick_codes(
@@ -173,7 +175,7 @@ create_survey_url <- function(
   if (is.null(organisation_type)) {
     organisation_type <- pick_codes(ORG, "Select organisation type")
   }
-  
+
   # ---- Build URL ----
   survey_url <- build_url(
     "https://curtin.au1.qualtrics.com/jfe/form/SV_eXLvfgMz58RktQa",
@@ -183,7 +185,7 @@ create_survey_url <- function(
     aagi_node,
     organisation_type
   )
-  
+
   # ---- Summary ----
   cli::cli_h1("Survey Summary")
   cli::cli_h2("Survey URL")
@@ -193,10 +195,12 @@ create_survey_url <- function(
     "Support type{?s}: {SUPPORT[support_type]}"
   )
   cli::cli_text(
-    "Design type: {ifelse(nzchar(design_type), DESIGN[[design_type]], '<blank>')}"
+    "Design type: {ifelse(nzchar(design_type), DESIGN[[design_type]],
+      '<blank>')}"
   )
   cli::cli_text(
-    "Analysis type: {ifelse(nzchar(analysis_type), ANALYSIS[[analysis_type]], '<blank>')}"
+    "Analysis type: {ifelse(nzchar(analysis_type), ANALYSIS[[analysis_type]],
+      '<blank>')}"
   )
   cli::cli_text("AAGI node: {NODE[[aagi_node]]}")
   cli::cli_text("Organisation type: {ORG[[organisation_type]]}")
@@ -206,12 +210,14 @@ create_survey_url <- function(
   cli::cli_end()
   cli::cli_par()
   cli::cli_text(
-    "Best practice: send a survey 7-10 days after each set of outputs rather than combining feedback."
+    "Best practice: send a survey 7-10 days after each set of outputs rather
+     than combining feedback."
   )
   cli::cli_end()
   cli::cli_par()
   cli::cli_text(
-    "The URL has been copied to your clipboard for you to paste in your e-mail to your partners."
+    "The URL has been copied to your clipboard for you to paste in your e-mail
+     to your partners."
   )
   cli::cli_end()
   copy_to_clip(x = survey_url)
@@ -286,12 +292,12 @@ ensure_valid <- function(vals, allowed, field) {
 #' @returns The full URL string.
 
 build_url <- function(
-    base,
-    support_type,
-    design_type,
-    analysis_type,
-    aagi_node,
-    organisation_type
+  base,
+  support_type,
+  design_type,
+  analysis_type,
+  aagi_node,
+  organisation_type
 ) {
   params <- list(
     ST = paste(support_type, collapse = ","),
