@@ -32,12 +32,13 @@ selected for \code{support_type}. Options are:
 \item{"D_OTHER"}{Other design type chosen by the recipient}
 }}
 
-\item{analysis_type}{Character string of analysis type. Required if "S_A" is
-selected for \code{support_type}. Options are:
+\item{analysis_type}{Character string of analysis type. Required if
+"S_A" is selected for \code{support_type}. Options are:
 \describe{
 \item{"A_SP"}{Small plot trial data analysis}
 \item{"A_OFE"}{On farm experiment data analysis}
-\item{"A_PRO"}{Protected environment experiment data analysis (glasshouse or growth chamber)}
+\item{"A_PRO"}{Protected environment experiment data analysis
+(glasshouse or growth chamber)}
 \item{"A_BIO"}{Bioinformatics or genetic data}
 \item{"A_BRE"}{Breeding or selection program data}
 \item{"A_ENV"}{Environmental or geospatial data}
@@ -71,22 +72,27 @@ details you supplied and copies the URL to your operating system clipboard
 for inclusion in an email or other communication.
 }
 \description{
-This function is designed to be used each time you need to generate a survey URL for requesting feedback from a partner.
-It embeds information already known by the team so that respondents don't need to provide it.
-This includes the type of support provided, the output delivered, the AAGI node that delivered the work,
-and the organisation type of the partner. These details are included as metadata within the URL
-so that the survey platform can automatically link each respondent's feedback to the relevant contextual information.
+This function is designed to be used each time you need to
+generate a survey URL for requesting feedback from a partner. It embeds
+information already known by the team so that respondents do not need to
+provide it. This includes the type of support provided, the output delivered,
+the AAGI node that delivered the work, and the organisation type of the
+partner. These details are included as metadata within the URL so that the
+survey platform can automatically link each respondents feedback to the
+relevant contextual information.
 }
 \details{
 You can use the function in two ways. You can supply all required arguments
-directly in your script, or you can run the function interactively. In
+directly in your script, or you can run the function in interactive mode. In
 interactive use, the function presents a menu in the console that guides you
 through each field.
 }
 \examples{
 \dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
-# create a survey URL for design and analysis performed on small plots for
-# a government agency or department performed by CU
+# create a survey URL for design 
+# and analysis performed on small 
+# plots for a government agency 
+# or department performed by CU
 create_survey_url(
   support_type = c("S_D", "S_A"),
   design_type = "D_SP",
@@ -95,8 +101,10 @@ create_survey_url(
   organisation_type = "O_GOV"
 )
 
-# create a survey URL for a bioinformatics analysis for an academic
-# institution performed by UA
+# create a survey URL for a 
+# bioinformatics analysis for 
+# an academic institution 
+# performed by UA
 create_survey_url(
   support_type = "S_A",
   analysis_type = "A_BIO",
