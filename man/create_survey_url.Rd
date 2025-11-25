@@ -13,16 +13,16 @@ create_survey_url(
 )
 }
 \arguments{
-\item{support_type}{Character vector of support types.
+\item{support_type}{Character vector specifying the type(s) of support being evaluated.
+You may choose one or both.
 Options are:
 \describe{
 \item{"S_D"}{Experimental design support}
 \item{"S_A"}{Analysis support}
-}
-You may choose one or both.}
+}}
 
-\item{design_type}{Character string of design type. Required if "S_D" is
-selected for \code{support_type}. Options are:
+\item{design_type}{Character string specifying the type of experimental design (required if "S_D" is selected for \code{support_type}).
+Options are:
 \describe{
 \item{"D_SP"}{Small plot trial design}
 \item{"D_OFE"}{On farm experiment design}
@@ -89,10 +89,10 @@ through each field.
 }
 \examples{
 \dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
-# create a survey URL for design 
-# and analysis performed on small 
-# plots for a government agency 
-# or department performed by CU
+# create a survey URL for
+# - a small plot trial design & analysis
+# - for a government agency or department
+# - performed by CU
 create_survey_url(
   support_type = c("S_D", "S_A"),
   design_type = "D_SP",
@@ -101,10 +101,10 @@ create_survey_url(
   organisation_type = "O_GOV"
 )
 
-# create a survey URL for a 
-# bioinformatics analysis for 
-# an academic institution 
-# performed by UA
+# create a survey URL for
+# - a bioinformatics analysis
+# - for an academic institution
+# - performed by UA
 create_survey_url(
   support_type = "S_A",
   analysis_type = "A_BIO",
