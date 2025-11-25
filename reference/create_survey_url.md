@@ -1,9 +1,13 @@
 # Create an AAGI Survey URL
 
-An interactive menu-driven function to generate a URL for sharing a
-survey with AAGI partners. You can either supply all the necessary
-details and script it or use interactively and run the function
-answering a menu-driven set of questions to generate the URL.
+This function is designed to be used each time you need to generate a
+survey URL for requesting feedback from a partner. It embeds information
+already known by the team so that respondents do not need to provide it.
+This includes the type of support provided, the output delivered, the
+AAGI node that delivered the work, and the organisation type of the
+partner. These details are included as metadata within the URL so that
+the survey platform can automatically link each respondents feedback to
+the relevant contextual information.
 
 ## Usage
 
@@ -21,7 +25,8 @@ create_survey_url(
 
 - support_type:
 
-  Character vector of support types. Options are:
+  Character vector specifying the type(s) of support being evaluated.
+  You may choose one or both. Options are:
 
   "S_D"
 
@@ -31,36 +36,34 @@ create_survey_url(
 
   :   Analysis support
 
-  You may choose both.
-
 - design_type:
 
-  Character string of design type. Required if "S_D" is selected for
-  `support_type`. Options are:
+  Character string specifying the type of experimental design (required
+  if "S_D" is selected for `support_type`). Options are:
 
   "D_SP"
 
-  :   Small plot trial design,
+  :   Small plot trial design
 
   "D_OFE"
 
-  :   On farm experiment design,
+  :   On farm experiment design
 
   "D_GH"
 
-  :   Glasshouse experiment design,
+  :   Glasshouse experiment design
 
   "D_GC"
 
-  :   Growth chamber experiment design,
+  :   Growth chamber experiment design
 
   "D_LAB"
 
-  :   Lab experiment design,
+  :   Lab experiment design
 
   "D_OTHER"
 
-  :   Other type to be selected by recipient.
+  :   Other design type chosen by the recipient
 
 - analysis_type:
 
@@ -69,40 +72,40 @@ create_survey_url(
 
   "A_SP"
 
-  :   Small plot trial data analysis,
+  :   Small plot trial data analysis
 
   "A_OFE"
 
-  :   On farm experiment data analysis,
+  :   On farm experiment data analysis
 
   "A_PRO"
 
   :   Protected environment experiment data analysis (glasshouse or
-      growth chamber),
+      growth chamber)
 
   "A_BIO"
 
-  :   Bioinformatics or genetic data,
+  :   Bioinformatics or genetic data
 
   "A_BRE"
 
-  :   Breeding or selection program data,
+  :   Breeding or selection program data
 
   "A_ENV"
 
-  :   Environmental or geospatial data,
+  :   Environmental or geospatial data
 
   "A_IMG"
 
-  :   Imagery data,
+  :   Imagery data
 
   "A_REC"
 
-  :   Farm records or monitoring data,
+  :   Farm records or monitoring data
 
   "A_OTHER"
 
-  :   Other type to be selected by recipient.
+  :   Other type to be selected by recipient
 
 - aagi_node:
 
@@ -110,15 +113,15 @@ create_survey_url(
 
   "CU"
 
-  :   Curtin University,
+  :   Curtin University
 
   "UA"
 
-  :   University of Adelaide,
+  :   University of Adelaide
 
   "UQ"
 
-  :   University of Queensland.
+  :   University of Queensland
 
 - organisation_type:
 
@@ -126,36 +129,45 @@ create_survey_url(
 
   "O_GRO"
 
-  :   Grower group, industry association, or farm cooperative,
+  :   Grower group, industry association or farm cooperative
 
   "O_AGR"
 
-  :   Agronomy or farm advisory practice,
+  :   Agronomy or farm advisory practice
 
   "O_ACA"
 
-  :   Academic institution,
+  :   Academic institution
 
   "O_GOV"
 
-  :   Government agency or department,
+  :   Government agency or department
 
   "O_BRE"
 
-  :   Seed or breeding company,
+  :   Seed or breeding company
 
   "O_TEC"
 
-  :   Tech, biotech, or chemical company,
+  :   Technology, biotechnology or chemical company
 
   "O_OTHER"
 
-  :   Other type to be selected by recipient.
+  :   Other organisation type chosen by the recipient
 
 ## Value
 
-The full survey URL to the OS clipboard (invisibly). Prints a summary
-for convenience.
+Once the relevant information has been provided, the function returns
+the completed survey URL, prints a short summary of the details you
+supplied and copies the URL to your operating system clipboard for
+inclusion in an email or other communication.
+
+## Details
+
+You can use the function in two ways. You can supply all required
+arguments directly in your script, or you can run the function in
+interactive mode. In interactive use, the function presents a menu in
+the console that guides you through each field.
 
 ## Author
 
@@ -166,8 +178,10 @@ Rose Megirian, <rose.megirian@curtin.edu.au> and Adam H. Sparks,
 
 ``` r
 if (FALSE) { # interactive()
-# create a survey URL for design and analysis performed on small plots for
-# a government agency or department performed by CU
+# create a survey URL for
+# - a small plot trial design & analysis
+# - for a government agency or department
+# - performed by CU
 create_survey_url(
   support_type = c("S_D", "S_A"),
   design_type = "D_SP",
@@ -176,8 +190,10 @@ create_survey_url(
   organisation_type = "O_GOV"
 )
 
-# create a survey URL for a bioinformatics analysis for an academic
-# institution performed by UA
+# create a survey URL for
+# - a bioinformatics analysis
+# - for an academic institution
+# - performed by UA
 create_survey_url(
   support_type = "S_A",
   analysis_type = "A_BIO",
