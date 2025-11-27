@@ -27,7 +27,7 @@ install.packages("AAGISurvey")
 
 # Quick start
 
-Currently {AAGISurvey} only contains one function,
+Currently, {AAGISurvey} only contains one function,
 [`create_survey_url()`](https://AAGI-AUS.github.io/AAGISurvey/reference/create_survey_url.md),
 which creates a URL that links to a Qualtrics survey for you to send to
 AAGI Service and Support partners for completion.
