@@ -18,9 +18,12 @@ Note that you only need to do this once.
 If you have done this before for another AAGI package, you can skip this step.
 
 ```r
-options(repos = c(
-    aagi_aus = 'https://aagi-aus.r-universe.dev',
-    CRAN = 'https://cloud.r-project.org'))
+options(
+  repos = c(
+    AAGI = 'https://aagi-aus.r-universe.dev',
+    CRAN = 'https://cloud.r-project.org'
+  )
+)
 ```
 
 ### Install
