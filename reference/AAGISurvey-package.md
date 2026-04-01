@@ -3,6 +3,12 @@
 Create 'AAGI' service and support survey URLs interactively or scripted
 for sharing with partners.
 
+## See also
+
+Useful links:
+
+- <https://aagi-aus.github.io/AAGISurvey>
+
 ## Author
 
 **Maintainer**: Adam Sparks <adam.sparks@curtin.edu.au>
