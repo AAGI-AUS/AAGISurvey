@@ -11,7 +11,7 @@
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.5.2 (2025-10-31)",
+  "runtimePlatform": "R version 4.5.3 (2026-03-11)",
   "author": [
     {
       "@type": "Person",
@@ -37,6 +37,18 @@
     }
   ],
   "softwareSuggestions": [
+    {
+      "@type": "SoftwareApplication",
+      "identifier": "quarto",
+      "name": "quarto",
+      "provider": {
+        "@id": "https://cran.r-project.org",
+        "@type": "Organization",
+        "name": "Comprehensive R Archive Network (CRAN)",
+        "url": "https://cran.r-project.org"
+      },
+      "sameAs": "https://CRAN.R-project.org/package=quarto"
+    },
     {
       "@type": "SoftwareApplication",
       "identifier": "roxyglobals",
@@ -102,7 +114,7 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "19.689KB",
+  "fileSize": "33.986KB",
   "codeRepository": "https://github.com/AAGI-AUS/AAGISurvey",
   "readme": "https://github.com/AAGI-AUS/AAGISurvey/blob/main/README.md",
   "contIntegration": "https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml",
