@@ -12,13 +12,13 @@ bibliography: references.bib
 
 Every experimental design or data analysis output delivered as part of a Service & Support collaboration should be accompanied by an opportunity for collaborators to provide feedback via the AAGI Collaborator Survey. To ensure only relevant questions are shown and that key contextual information is captured alongside responses, each survey link must be customised before sharing - this means selecting details specific to the output and recipient, such as the type of support provided, the AAGI node, and the collaborator's organisation type, which are then encoded directly into the link.
 
-The [`create_survey_url()`](https://aagi-aus.github.io/AAGISurvey/reference/create_survey_url.html) function makes this straightforward. Run it once per output delivery, and it will generate the correct link, print a summary of your selections for you to verify, and copy the URL to your clipboard ready to paste into your delivery email.
+The `create_survey_url()` function makes this straightforward. Run it once per output delivery, and it will generate the correct link, print a summary of your selections for you to verify, and copy the URL to your clipboard ready to paste into your delivery email.
 
 ## Installation and Use
 
 ### Step 1: Enable the AAGI R-Universe
 
-To install the {AAGISurvey} package containing the [`create_survey_url()`](https://aagi-aus.github.io/AAGISurvey/reference/create_survey_url.html) function, you first need to enable the AAGI R Universe in your R session.
+To install the {AAGISurvey} package containing the `create_survey_url()` function, you first need to enable the AAGI R Universe in your R session.
 You only need to do this once.
 If you have already enabled the AAGI R Universe for another package, you can skip steps 1 & 2 and jump straight to [Step 3. Load the package](link_generation_guide.qmd#Step%203:%20Load%20the%20package).
 
