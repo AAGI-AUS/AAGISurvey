@@ -14,6 +14,7 @@ Imports:
     clipr,
     rlang
 Suggests: 
+    quarto,
     roxyglobals,
     testthat (>= 3.0.0)
 Config/Needs/build: moodymudskipper/devtag
@@ -24,3 +25,5 @@ Roxygen: list(markdown = TRUE, roclets = c("collate", "namespace", "rd",
     "roxyglobals::global_roclet", "devtag::dev_roclet"))
 RoxygenNote: 7.3.3
 Config/testthat/edition: 3
+VignetteBuilder: 
+    quarto
