@@ -107,3 +107,9 @@ Guidelines](https://AAGI-AUS.github.io/AAGISurvey/CONTRIBUTING.md).
 - [`create_survey_url()`](https://AAGI-AUS.github.io/AAGISurvey/reference/create_survey_url.md)
   : Create an AAGI Survey URL
 
+# Articles
+
+### All vignettes
+
+- [Customising and Distributing the AAGI Collaborator
+  Survey](https://AAGI-AUS.github.io/AAGISurvey/articles/AAGISurvey.md):
