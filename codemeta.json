@@ -4,6 +4,7 @@
   "identifier": "AAGISurvey",
   "description": "Create 'AAGI' service and support survey URLs interactively or scripted for sharing with partners.",
   "name": "AAGISurvey: Create AAGI Survey URLs and Analyse AAGI Survey Results",
+  "codeRepository": "https://github.com/AAGI-AUS/AAGISurvey",
   "license": "https://spdx.org/licenses/MIT",
   "version": "0.0.2",
   "programmingLanguage": {
@@ -114,8 +115,8 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "33.919KB",
-  "codeRepository": "https://github.com/AAGI-AUS/AAGISurvey",
+  "fileSize": "34.053KB",
+  "relatedLink": "https://aagi-aus.github.io/AAGISurvey",
   "releaseNotes": "https://github.com/AAGI-AUS/AAGISurvey/blob/main/NEWS.md",
   "readme": "https://github.com/AAGI-AUS/AAGISurvey/blob/main/README.md",
   "contIntegration": "https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml",
