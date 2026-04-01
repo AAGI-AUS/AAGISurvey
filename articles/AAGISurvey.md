@@ -54,7 +54,7 @@ library(AAGISurvey)
 ```
 
 Once installed, you only need
-[`library(AAGISurvey)`](https://aagi-aus.github.io/AAGISurvey) in future
+[`library(AAGISurvey)`](https://AAGI-AUS.github.io/AAGISurvey) in future
 sessions.
 
 ### Step 4. Run the `create_survey_url()` function
