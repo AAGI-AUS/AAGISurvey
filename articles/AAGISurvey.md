@@ -13,7 +13,7 @@ node, and the collaborator’s organisation type, which are then encoded
 directly into the link.
 
 The
-[`create_survey_url()`](https://aagi-aus.github.io/AAGISurvey/reference/create_survey_url.html)
+[`create_survey_url()`](https://AAGI-AUS.github.io/AAGISurvey/reference/create_survey_url.md)
 function makes this straightforward. Run it once per output delivery,
 and it will generate the correct link, print a summary of your
 selections for you to verify, and copy the URL to your clipboard ready
@@ -24,7 +24,7 @@ to paste into your delivery email.
 ### Step 1: Enable the AAGI R-Universe
 
 To install the {AAGISurvey} package containing the
-[`create_survey_url()`](https://aagi-aus.github.io/AAGISurvey/reference/create_survey_url.html)
+[`create_survey_url()`](https://AAGI-AUS.github.io/AAGISurvey/reference/create_survey_url.md)
 function, you first need to enable the AAGI R Universe in your R
 session. You only need to do this once. If you have already enabled the
 AAGI R Universe for another package, you can skip steps 1 & 2 and jump
