@@ -203,7 +203,7 @@ create_survey_url <- function(
 pick_codes <- function(dict, title, multiple = FALSE) {
   if (isFALSE(rlang::is_interactive())) {
     cli::cli_abort(
-      "Missing required value for {title} in non-interactive session."
+      c(x = "Missing required value for {title} in non-interactive session.")
     )
   }
   sel <- utils::select.list(unname(dict), title = title, multiple = multiple)
@@ -230,7 +230,7 @@ ensure_valid <- function(vals, allowed, field) {
   bad <- setdiff(vals, names(allowed))
   if (length(bad)) {
     cli::cli_abort(
-      "Invalid {field}: {bad}"
+      c(x = "Invalid {field}: {bad}")
     )
   }
   return(invisible(NULL))
