@@ -55,7 +55,7 @@
 #' @param aagi_node Character string of AAGI node. Options are:
 #'   \describe{
 #'     \item{"CU"}{Curtin University}
-#'     \item{"UA"}{University of Adelaide}
+#'     \item{"AU"}{Adelaide University}
 #'     \item{"UQ"}{University of Queensland}
 #'   }
 #'
@@ -132,7 +132,7 @@ create_survey_url <- function(
   )
   NODE <- c(
     CU = "Curtin University",
-    UA = "University of Adelaide",
+    UA = "Adelaide University",
     UQ = "University of Queensland"
   )
   ORG <- c(
