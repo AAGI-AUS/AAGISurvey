@@ -13,9 +13,8 @@ create_survey_url(
 )
 }
 \arguments{
-\item{support_type}{Character vector specifying the type(s) of support being
-evaluated.
-You may choose one or both.
+\item{support_type}{Character vector specifying the type of support being
+evaluated. You must choose one.
 Options are:
 \describe{
 \item{"S_D"}{Experimental design support}
@@ -51,9 +50,12 @@ Options are:
 
 \item{aagi_node}{Character string of AAGI node. Options are:
 \describe{
-\item{"CU"}{Curtin University}
+\item{"ANU"}{Australian National University}
 \item{"AU"}{Adelaide University}
+\item{"CU"}{Curtin University}
+\item{"QDPI"}{Queensland Department of Primary Industries}
 \item{"UQ"}{University of Queensland}
+\item{"UWA"}{University of Western Australia}
 }}
 
 \item{organisation_type}{Character string of organisation type. Options are:
@@ -106,11 +108,11 @@ create_survey_url(
 # create a survey URL for
 # - a bioinformatics analysis
 # - for an academic institution
-# - performed by UA
+# - performed by AU
 create_survey_url(
   support_type = "S_A",
   analysis_type = "A_BIO",
-  aagi_node = "UA",
+  aagi_node = "AU",
   organisation_type = "O_ACA"
 )
 \dontshow{\}) # examplesIf}
