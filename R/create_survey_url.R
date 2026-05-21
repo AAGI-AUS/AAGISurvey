@@ -85,11 +85,11 @@
 #' # create a survey URL for
 #' # - a bioinformatics analysis
 #' # - for an academic institution
-#' # - performed by UA
+#' # - performed by AU
 #' create_survey_url(
 #'   support_type = "S_A",
 #'   analysis_type = "A_BIO",
-#'   aagi_node = "UA",
+#'   aagi_node = "AU",
 #'   organisation_type = "O_ACA"
 #' )
 #' @author Rose Megirian, \email{rose.megirian@@curtin.edu.au} and Adam H.
