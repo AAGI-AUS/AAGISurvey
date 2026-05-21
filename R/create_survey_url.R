@@ -16,9 +16,8 @@
 #' through each field.
 #'
 #'
-#' @param support_type Character vector specifying the type(s) of support being
-#' evaluated.
-#' You may choose one or both.
+#' @param support_type Character vector specifying the type of support being
+#' evaluated. You must choose one.
 #' Options are:
 #'   \describe{
 #'     \item{"S_D"}{Experimental design support}
@@ -120,11 +119,11 @@ create_survey_url <- function(
   if (is.null(support_type) || (!all(nzchar(support_type)))) {
     support_type <- pick_codes(
       SUPPORT,
-      "Select support type(s)",
-      multiple = TRUE
+      "Select support type",
+      multiple = FALSE
     )
     if (!all(nzchar(support_type))) {
-      cli::cli_abort("You must select at least one support type.")
+      cli::cli_abort(c(x = "You must select a support type."))
     }
   }
   if ("S_D" %in% support_type && is.null(design_type)) {
@@ -156,7 +155,7 @@ create_survey_url <- function(
   cli::cli_text(survey_url)
   cli::cli_h2("Selections")
   cli::cli_par(
-    "Support type{?s}: {SUPPORT[support_type]}"
+    "Support type: {SUPPORT[support_type]}"
   )
   cli::cli_text(
     "Design type: {ifelse(nzchar(design_type), DESIGN[[design_type]],
@@ -168,8 +167,8 @@ create_survey_url <- function(
   )
   cli::cli_text("AAGI node: {NODE[[aagi_node]]}")
   cli::cli_text("Organisation type: {ORG[[organisation_type]]}")
-  if (length(support_type) > 1L) {
-    cli::cli_alert_info("You selected more than one support type.")
+  if (length(support_type) != 1) {
+    cli::cli_abort(c(x = "You selected more than one support type."))
   }
   cli::cli_end()
   cli::cli_par()
