@@ -52,7 +52,7 @@ Options are:
 \item{aagi_node}{Character string of AAGI node. Options are:
 \describe{
 \item{"CU"}{Curtin University}
-\item{"UA"}{University of Adelaide}
+\item{"AU"}{Adelaide University}
 \item{"UQ"}{University of Queensland}
 }}
 

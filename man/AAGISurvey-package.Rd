@@ -11,7 +11,8 @@ Create 'AAGI' service and support survey URLs interactively or scripted for shar
 \seealso{
 Useful links:
 \itemize{
-  \item \url{https://aagi-aus.github.io/AAGISurvey}
+  \item \url{https://AAGI-AUS.github.io/AAGISurvey}
+  \item \url{https://github.com/aagi-aus/AAGISurvey}
 }
 
 }
@@ -20,7 +21,13 @@ Useful links:
 
 Authors:
 \itemize{
+  \item Adam Sparks \email{adam.sparks@curtin.edu.au} (\href{https://orcid.org/0000-0002-0061-8359}{ORCID})
   \item Rose Megirian \email{rose.megirian@curtin.edu.au}
+}
+
+Other contributors:
+\itemize{
+  \item Grains Research and Development Corporation (\href{https://ror.org/02xwr1996}{ROR}) (GRDC Project CUR2210-005OPX (AAGI-CU)) [funder, copyright holder]
 }
 
 }
