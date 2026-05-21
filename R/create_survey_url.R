@@ -53,9 +53,12 @@
 #'
 #' @param aagi_node Character string of AAGI node. Options are:
 #'   \describe{
-#'     \item{"CU"}{Curtin University}
+#'     \item{"ANU"}{Australian National University}
 #'     \item{"AU"}{Adelaide University}
+#'     \item{"CU"}{Curtin University}
+#'     \item{"QDPI"}{Queensland Department of Primary Industries}
 #'     \item{"UQ"}{University of Queensland}
+#'     \item{"UWA"}{University of Western Australia}
 #'   }
 #'
 #' @param organisation_type Character string of organisation type. Options are:
