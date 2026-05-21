@@ -32,6 +32,7 @@ straight to [Step 3. Load the
 package](https://AAGI-AUS.github.io/AAGISurvey/articles/link_generation_guide.qmd#Step%203:%20Load%20the%20package).
 
 ``` r
+
 # example syntax for enabling the AAGI R-Universe
 options(
   repos = c(
@@ -44,12 +45,14 @@ options(
 ### Step 2: Install the package
 
 ``` r
+
 install.packages("AAGISurvey")
 ```
 
 ### Step 3: Load the package
 
 ``` r
+
 library(AAGISurvey)
 ```
 
@@ -71,6 +74,7 @@ can be run in one of two ways:
 **Scripted example:**
 
 ``` r
+
 library(AAGISurvey)
 
 # Create a survey URL for design support for small plot
@@ -88,6 +92,7 @@ url <- create_survey_url(
 **Interactive example**
 
 ``` r
+
 library(AAGISurvey)
 
 url <- create_survey_url()
@@ -110,6 +115,7 @@ coded values for the scripted example, you can view the full
 documentation in R:
 
 ``` r
+
 ?create_survey_url
 
 # or

@@ -50,18 +50,22 @@ advice.
 
 ### Code style
 
-- We use [air](https://posit-dev.github.io/air/) for formatting our code
+- We use [Air](https://posit-dev.github.io/air/) for formatting our code
   style. New code should follow our formatting guidelines found in
-  [air.toml](https://AAGI-AUS.github.io/air.toml).
+  [Air.toml](https://AAGI-AUS.github.io/air.toml).
 
-- We use [roxygen2](https://cran.r-project.org/package=roxygen2), with
+- We use [{roxygen2}](https://cran.r-project.org/package=roxygen2), with
   [Markdown
   syntax](https://cran.r-project.org/web/packages/roxygen2/vignettes/rd-formatting.html),
   for documentation.
 
-- We use [testthat](https://cran.r-project.org/package=testthat) for
+- We use [{testthat}](https://cran.r-project.org/package=testthat) for
   unit tests. Contributions with test cases included are easier to
   accept.
+
+  - We use [{devtag}](https://github.com/moodymudskipper/devtag) for
+    documenting internal functions. You can install it with
+    `pak::pak("moodymudskipper/devtag")`.
 
 ## Code of Conduct
 

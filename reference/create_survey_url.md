@@ -115,9 +115,9 @@ create_survey_url(
 
   :   Curtin University
 
-  "UA"
+  "AU"
 
-  :   University of Adelaide
+  :   Adelaide University
 
   "UQ"
 

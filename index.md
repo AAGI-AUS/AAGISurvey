@@ -14,6 +14,7 @@ Note that you only need to do this once. If you have done this before
 for another AAGI package, you can skip this step.
 
 ``` r
+
 options(
   repos = c(
     AAGI = 'https://aagi-aus.r-universe.dev',
@@ -25,6 +26,7 @@ options(
 ### Install
 
 ``` r
+
 install.packages("AAGISurvey")
 ```
 
@@ -45,6 +47,7 @@ the URL to copy and paste into an email or other communication that is
 automatically copied to your OS’s clipboard for you.
 
 ``` r
+
 library(AAGISurvey)
 create_survey_url()
 ```
@@ -74,6 +77,7 @@ Guidelines](https://AAGI-AUS.github.io/AAGISurvey/CONTRIBUTING.md).
 4.  Test your changes by running:
 
     ``` r
+
     devtools::load_all()
     ```
 
@@ -83,6 +87,7 @@ Guidelines](https://AAGI-AUS.github.io/AAGISurvey/CONTRIBUTING.md).
     Roxygen2 comments and generate the documentation with:
 
     ``` r
+
     devtools::document()
     ```
 
