@@ -1,15 +1,18 @@
 Package: AAGISurvey
 Title: Create AAGI Survey URLs and Analyse AAGI Survey Results
-Version: 0.0.2
+Version: 0.0.3
 Authors@R: c(
     person("Rose", "Megirian", , "rose.megirian@curtin.edu.au", role = "aut"),
     person("Adam", "Sparks", , "adam.sparks@curtin.edu.au", role = c("aut", "cre"),
-           comment = c(ORCID = "0000-0002-0061-8359"))
+           comment = c(ORCID = "0000-0002-0061-8359")),
+    person("Grains Research and Development Corporation", role = c("fnd", "cph"),
+           comment = c("GRDC Project CUR2210-005OPX (AAGI-CU)", ROR = "02xwr1996"))
   )
 Description: Create 'AAGI' service and support survey URLs interactively
     or scripted for sharing with partners.
 License: MIT + file LICENSE
-URL: https://AAGI-AUS.github.io/AAGISurvey, https://github.com/aagi-aus/AAGISurvey
+URL: https://AAGI-AUS.github.io/AAGISurvey,
+    https://github.com/aagi-aus/AAGISurvey
 Imports:
     cli,
     clipr,
@@ -21,10 +24,10 @@ Suggests:
 VignetteBuilder: 
     quarto
 Config/Needs/build: moodymudskipper/devtag
+Config/roxygen2/version: 8.0.0
 Config/roxyglobals/filename: globals.R
 Config/roxyglobals/unique: FALSE
 Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE, roclets = c("collate", "namespace", "rd",
     "roxyglobals::global_roclet", "devtag::dev_roclet"))
-RoxygenNote: 7.3.3
