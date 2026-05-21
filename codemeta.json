@@ -4,15 +4,16 @@
   "identifier": "AAGISurvey",
   "description": "Create 'AAGI' service and support survey URLs interactively or scripted for sharing with partners.",
   "name": "AAGISurvey: Create AAGI Survey URLs and Analyse AAGI Survey Results",
-  "codeRepository": "https://github.com/AAGI-AUS/AAGISurvey",
+  "relatedLink": "https://AAGI-AUS.github.io/AAGISurvey",
+  "codeRepository": "https://github.com/aagi-aus/AAGISurvey",
   "license": "https://spdx.org/licenses/MIT",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
     "name": "R",
     "url": "https://r-project.org"
   },
-  "runtimePlatform": "R version 4.5.3 (2026-03-11)",
+  "runtimePlatform": "R version 4.6.0 (2026-04-24)",
   "author": [
     {
       "@type": "Person",
@@ -26,6 +27,18 @@
       "familyName": "Sparks",
       "email": "adam.sparks@curtin.edu.au",
       "@id": "https://orcid.org/0000-0002-0061-8359"
+    }
+  ],
+  "copyrightHolder": [
+    {
+      "@type": "Organization",
+      "name": "Grains Research and Development Corporation"
+    }
+  ],
+  "funder": [
+    {
+      "@type": "Organization",
+      "name": "Grains Research and Development Corporation"
     }
   ],
   "maintainer": [
@@ -115,9 +128,8 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "34.167KB",
-  "relatedLink": "https://aagi-aus.github.io/AAGISurvey",
-  "releaseNotes": "https://github.com/AAGI-AUS/AAGISurvey/blob/main/NEWS.md",
+  "fileSize": "350.256KB",
+  "releaseNotes": "https://github.com/aagi-aus/AAGISurvey/blob/main/NEWS.md",
   "readme": "https://github.com/AAGI-AUS/AAGISurvey/blob/main/README.md",
   "contIntegration": "https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml",
   "keywords": "r"
