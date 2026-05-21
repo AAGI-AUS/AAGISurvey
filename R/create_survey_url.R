@@ -173,8 +173,8 @@ create_survey_url <- function(
   cli::cli_end()
   cli::cli_par()
   cli::cli_text(
-    "Best practice: send a survey 7-10 days after each set of outputs rather
-     than combining feedback."
+    "Best practice: deliver your customised survey link in the same email as the
+    output it relates to."
   )
   cli::cli_end()
   cli::cli_par()
