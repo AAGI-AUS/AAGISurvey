@@ -94,10 +94,12 @@
 #' )
 #' @author Rose Megirian, \email{rose.megirian@@curtin.edu.au} and Adam H.
 #'  Sparks, \email{adam.sparks@@curtin.edu.au}
+#'
 #' @returns Once the relevant information has been provided, the
 #' function returns the completed survey URL, prints a short summary of the
 #' details you supplied and copies the URL to your operating system clipboard
 #' for inclusion in an email or other communication.
+#'
 #' @autoglobal
 #' @export
 
