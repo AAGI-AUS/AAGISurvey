@@ -32,13 +32,16 @@ See our guide on [how to create a great issue](https://code-review.tidyverse.org
 
 ### Code style
 
-- We use [air](https://posit-dev.github.io/air/) for formatting our code style.
-  New code should follow our formatting guidelines found in [air.toml](../air.toml).
+- We use [Air](https://posit-dev.github.io/air/) for formatting our code style.
+  New code should follow our formatting guidelines found in [Air.toml](../air.toml).
 
-- We use [roxygen2](https://cran.r-project.org/package=roxygen2), with [Markdown syntax](https://cran.r-project.org/web/packages/roxygen2/vignettes/rd-formatting.html), for documentation.
+- We use [{roxygen2}](https://cran.r-project.org/package=roxygen2), with [Markdown syntax](https://cran.r-project.org/web/packages/roxygen2/vignettes/rd-formatting.html), for documentation.
 
-- We use [testthat](https://cran.r-project.org/package=testthat) for unit tests.
+- We use [{testthat}](https://cran.r-project.org/package=testthat) for unit tests.
   Contributions with test cases included are easier to accept.
+
+  - We use [{devtag}](https://github.com/moodymudskipper/devtag) for documenting internal functions.
+You can install it with `pak::pak("moodymudskipper/devtag")`.
 
 ## Code of Conduct
 
