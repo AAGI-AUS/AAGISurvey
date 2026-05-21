@@ -128,7 +128,7 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "350.256KB",
+  "fileSize": "350.906KB",
   "releaseNotes": "https://github.com/aagi-aus/AAGISurvey/blob/main/NEWS.md",
   "readme": "https://github.com/AAGI-AUS/AAGISurvey/blob/main/README.md",
   "contIntegration": "https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml",
