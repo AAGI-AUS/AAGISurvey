@@ -109,42 +109,6 @@ create_survey_url <- function(
   aagi_node = NULL,
   organisation_type = NULL
 ) {
-  # ---- Constants ----
-  SUPPORT <- c(S_D = "Experimental design support", S_A = "Analysis support")
-  DESIGN <- c(
-    D_SP = "Small plot trial design",
-    D_OFE = "On farm experiment design",
-    D_GH = "Glasshouse experiment design",
-    D_GC = "Growth chamber experiment design",
-    D_LAB = "Lab experiment design",
-    D_OTHER = "Other (recipient selects)"
-  )
-  ANALYSIS <- c(
-    A_SP = "Small plot trial data analysis",
-    A_OFE = "On farm experiment data analysis",
-    A_PRO = "Protected environment experiment data analysis",
-    A_BIO = "Bioinformatics or genetic data",
-    A_BRE = "Breeding or selection program data",
-    A_ENV = "Environmental or geospatial data",
-    A_IMG = "Imagery data",
-    A_REC = "Farm records or monitoring data",
-    A_OTHER = "Other (recipient selects)"
-  )
-  NODE <- c(
-    CU = "Curtin University",
-    UA = "Adelaide University",
-    UQ = "University of Queensland"
-  )
-  ORG <- c(
-    O_GRO = "Grower group / industry association / cooperative",
-    O_AGR = "Agronomy or farm advisory practice",
-    O_ACA = "Academic institution",
-    O_GOV = "Government agency or department",
-    O_BRE = "Seed or breeding company",
-    O_TEC = "Tech, biotech, or chemical company",
-    O_OTHER = "Other"
-  )
-
   # ---- Validate inputs ----
   ensure_valid(support_type, SUPPORT, "support_type")
   ensure_valid(design_type, DESIGN, "design_type")
