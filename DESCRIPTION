@@ -13,6 +13,7 @@ Description: Create 'AAGI' service and support survey URLs interactively
 License: MIT + file LICENSE
 URL: https://AAGI-AUS.github.io/AAGISurvey,
     https://github.com/aagi-aus/AAGISurvey
+BugReports: https://github.com/AAGI-AUS/AAGISurvey/issues
 Imports:
     cli,
     clipr,
