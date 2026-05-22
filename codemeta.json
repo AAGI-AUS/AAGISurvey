@@ -129,9 +129,10 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "435.801KB",
+  "fileSize": "35.834KB",
   "releaseNotes": "https://github.com/aagi-aus/AAGISurvey/blob/main/NEWS.md",
   "readme": "https://github.com/AAGI-AUS/AAGISurvey/blob/main/README.md",
   "contIntegration": "https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml",
+  "developmentStatus": "https://www.repostatus.org/#active",
   "keywords": "r"
 }
