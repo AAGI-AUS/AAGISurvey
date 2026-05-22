@@ -2,8 +2,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml)
-
+[![R-CMD-check](https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml)[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 <!-- badges: end -->
 
 ## Installation instructions
