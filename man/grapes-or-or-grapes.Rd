@@ -2,11 +2,11 @@
 % Please edit documentation in R/utilities.R
 \name{\%||\%}
 \alias{\%||\%}
-\title{Return the left-hand side if it's not NULL, otherwise it return the right-hand side}
+\title{Return the left-hand side if it's not NULL, else return the right-hand side}
 \usage{
 x \%||\% y
 }
 \description{
-Return the left-hand side if it's not NULL, otherwise it return the right-hand side
+Return the left-hand side if it's not NULL, else return the right-hand side
 }
 \keyword{internal}
