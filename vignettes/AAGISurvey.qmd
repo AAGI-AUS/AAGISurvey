@@ -22,7 +22,7 @@ Run it once per output delivery, and it will generate the correct link, print a 
 
 To install the {AAGISurvey} package containing the `create_survey_url()` function, you first need to enable the AAGI R Universe in your R session.
 You only need to do this once.
-If you have already enabled the AAGI R Universe for another package, you can skip steps 1 & 2 and jump straight to [Step 3. Load the package](link_generation_guide.qmd#Step%203:%20Load%20the%20package).
+If you have already enabled the AAGI R Universe for another package, you can skip steps 1 & 2 and jump straight to [Step 3. Load the package](#Step%203:%20Load%20the%20package).
 
 ```{r}
 #| echo: true
@@ -198,8 +198,6 @@ This means the levers for managing it extend well beyond survey design and into 
 It is why what we do with the data matters as much as how we collect it.
 Failing to act on responses is not only a missed opportunity, it is an ethical breach of the implicit agreement that research participation represents.
 And in the communities we work with in the grains sector, where networks are tight and reputations travel, it has consequences that extend beyond a single survey to shape how future participation, and future researchers, are received.
-
-For those interested, these principles and the behavioural and methodological evidence behind them are explored in depth in [Behaviourally-Informed Survey Design: A Methodological Guide](../behaviourally_informed_survey_design/behaviourally_informed_survey_design.qmd).
 
 ### Closing the Loop
 
