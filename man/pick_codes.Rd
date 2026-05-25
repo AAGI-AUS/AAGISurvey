@@ -4,7 +4,7 @@
 \alias{pick_codes}
 \title{Pick and match codes from a named character vector}
 \usage{
-pick_codes(dict, title, multiple = FALSE)
+pick_codes(dict, title)
 }
 \value{
 A character vector of the selected codes.

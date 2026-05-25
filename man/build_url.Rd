@@ -16,7 +16,7 @@ build_url(
 \arguments{
 \item{base}{Character string of base URL.}
 
-\item{support_type}{Character vector of support types.}
+\item{support_type}{Character string of support type.}
 
 \item{design_type}{Character string of design type.}
 

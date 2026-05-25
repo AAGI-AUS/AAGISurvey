@@ -13,7 +13,7 @@ create_survey_url(
 )
 }
 \arguments{
-\item{support_type}{Character vector specifying the type of support being
+\item{support_type}{Character string specifying the type of support being
 evaluated. You must choose one.
 Options are:
 \describe{
@@ -22,7 +22,8 @@ Options are:
 }}
 
 \item{design_type}{Character string specifying the type of experimental
-design (required if "S_D" is selected for \code{support_type}).
+design (required if "S_D" is selected for \code{support_type}). You must choose
+one.'
 Options are:
 \describe{
 \item{"D_SP"}{Small plot trial design}
@@ -94,13 +95,12 @@ through each field.
 \examples{
 \dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 # create a survey URL for
-# - a small plot trial design & analysis
+# - a small plot trial design
 # - for a government agency or department
-# - performed by CU
+# - performed by Curtin node
 create_survey_url(
-  support_type = c("S_D", "S_A"),
+  support_type = "S_D",
   design_type = "D_SP",
-  analysis_type = "A_SP",
   aagi_node = "CU",
   organisation_type = "O_GOV"
 )
@@ -108,7 +108,7 @@ create_survey_url(
 # create a survey URL for
 # - a bioinformatics analysis
 # - for an academic institution
-# - performed by AU
+# - performed by Adelaide University node
 create_survey_url(
   support_type = "S_A",
   analysis_type = "A_BIO",
