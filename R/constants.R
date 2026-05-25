@@ -1,5 +1,8 @@
 # ---- Constants ----
+#' @export
 SUPPORT <- c(S_D = "Experimental design support", S_A = "Analysis support")
+
+#' @export
 DESIGN <- c(
   D_SP = "Small plot trial design",
   D_OFE = "On farm experiment design",
@@ -8,6 +11,8 @@ DESIGN <- c(
   D_LAB = "Lab experiment design",
   D_OTHER = "Other (recipient selects)"
 )
+
+#' @export
 ANALYSIS <- c(
   A_SP = "Small plot trial data analysis",
   A_OFE = "On farm experiment data analysis",
@@ -19,6 +24,8 @@ ANALYSIS <- c(
   A_REC = "Farm records or monitoring data",
   A_OTHER = "Other (recipient selects)"
 )
+
+#' @export
 NODE <- c(
   ANU = "Australian National University",
   AU = "Adelaide University",
@@ -27,6 +34,8 @@ NODE <- c(
   UQ = "University of Queensland",
   UWA = "University of Western Australia"
 )
+
+#' @export
 ORG <- c(
   O_GRO = "Grower group / industry association / cooperative",
   O_AGR = "Agronomy or farm advisory practice",
