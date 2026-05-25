@@ -7,7 +7,7 @@
   "relatedLink": "https://AAGI-AUS.github.io/AAGISurvey",
   "codeRepository": "https://github.com/aagi-aus/AAGISurvey",
   "issueTracker": "https://github.com/AAGI-AUS/AAGISurvey/issues",
-  "license": "https://spdx.org/licenses/GPL-3.0",
+  "license": "https://spdx.org/licenses/MIT",
   "version": "0.0.3",
   "programmingLanguage": {
     "@type": "ComputerLanguage",
@@ -131,7 +131,7 @@
   },
   "applicationCategory": "Tools",
   "isPartOf": "https://grdc.com.au/research/partnerships-and-initiatives/strategic-partnerships/aagi",
-  "fileSize": "43.858KB",
+  "fileSize": "43.868KB",
   "releaseNotes": "https://github.com/aagi-aus/AAGISurvey/blob/main/NEWS.md",
   "readme": "https://github.com/AAGI-AUS/AAGISurvey/blob/main/README.md",
   "contIntegration": "https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml",
