@@ -3,7 +3,7 @@
 #' Create the URL string from user provided values for returning to the user.
 #'
 #' @param base Character string of base URL.
-#' @param support_type Character vector of support types.
+#' @param support_type Character string of support type.
 #' @param design_type Character string of design type.
 #' @param analysis_type Character string of analysis type.
 #' @param aagi_node Character string of AAGI node.
