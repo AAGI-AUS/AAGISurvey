@@ -74,13 +74,12 @@
 #'
 #' @examplesIf interactive()
 #' # create a survey URL for
-#' # - a small plot trial design & analysis
+#' # - a small plot trial design
 #' # - for a government agency or department
-#' # - performed by CU
+#' # - performed by Curtin node
 #' create_survey_url(
-#'   support_type = c("S_D", "S_A"),
+#'   support_type = "S_D",
 #'   design_type = "D_SP",
-#'   analysis_type = "A_SP",
 #'   aagi_node = "CU",
 #'   organisation_type = "O_GOV"
 #' )
@@ -88,7 +87,7 @@
 #' # create a survey URL for
 #' # - a bioinformatics analysis
 #' # - for an academic institution
-#' # - performed by AU
+#' # - performed by Adelaide University node
 #' create_survey_url(
 #'   support_type = "S_A",
 #'   analysis_type = "A_BIO",
