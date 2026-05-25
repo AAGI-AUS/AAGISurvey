@@ -16,7 +16,7 @@
 #' through each field.
 #'
 #'
-#' @param support_type Character vector specifying the type of support being
+#' @param support_type Character string specifying the type of support being
 #' evaluated. You must choose one.
 #' Options are:
 #'   \describe{
