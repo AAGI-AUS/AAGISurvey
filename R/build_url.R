@@ -11,11 +11,12 @@
 #'
 #' @examples
 #' build_url(
-#'   "https://curtin.au1.qualtrics.com/jfe/form/SV_eXLvfgMz58RktQa",
-#'   "S_D",
-#'   "D_SP",
-#'   "CU",
-#'   "O_ACA"
+#'   base = "https://curtin.au1.qualtrics.com/jfe/form/SV_eXLvfgMz58RktQa",
+#'   support_type = "S_D",
+#'   design_type = "D_SP",
+#'   analysis_type = "A_BIO",
+#'   aagi_node = "CU",
+#'   organisation_type = "O_ACA"
 #' )
 #'
 #' @export
