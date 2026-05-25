@@ -1,5 +1,8 @@
 # ---- Constants ----
-SUPPORT <- c(S_D = "Experimental design support", S_A = "Analysis support")
+SUPPORT <- c(
+  S_D = "Experimental design support", 
+  S_A = "Analysis support"
+  )
 
 DESIGN <- c(
   D_SP = "Small plot trial design",

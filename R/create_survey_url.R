@@ -123,7 +123,7 @@ create_survey_url <- function(
   if (is.null(support_type) || (!all(nzchar(support_type)))) {
     support_type <- pick_codes(
       SUPPORT,
-      "Select support type",
+      "Select support type (if multiple were provided, create separate URLs for each).",
       multiple = FALSE
     )
     if (!all(nzchar(support_type))) {
