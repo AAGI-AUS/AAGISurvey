@@ -10,7 +10,7 @@ Authors@R: c(
   )
 Description: Create 'AAGI' service and support survey URLs interactively
     or scripted for sharing with partners.
-License: MIT + file LICENSE
+License: GPL (>= 3)
 URL: https://AAGI-AUS.github.io/AAGISurvey,
     https://github.com/aagi-aus/AAGISurvey
 BugReports: https://github.com/AAGI-AUS/AAGISurvey/issues
@@ -32,3 +32,5 @@ Config/testthat/edition: 3
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE, roclets = c("collate", "namespace", "rd",
     "roxyglobals::global_roclet", "devtag::dev_roclet"))
+X-schema.org-applicationCategory: Tools
+X-schema.org-isPartOf: https://grdc.com.au/research/partnerships-and-initiatives/strategic-partnerships/aagi
