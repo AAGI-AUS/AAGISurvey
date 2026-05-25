@@ -25,7 +25,8 @@
 #'   }
 #'
 #' @param design_type Character string specifying the type of experimental
-#' design (required if "S_D" is selected for `support_type`).
+#' design (required if "S_D" is selected for `support_type`). You must choose
+#' one.'
 #' Options are:
 #'   \describe{
 #'     \item{"D_SP"}{Small plot trial design}
@@ -120,12 +121,14 @@ create_survey_url <- function(
   ensure_valid(organisation_type, ORG, "organisation_type")
 
   # ---- Interactive prompts for missing ----
+  if (!is.null(support_type) && length(support_type) > 1) {
+    cli::cli_abort(c(
+      x = "Only one support type may be selected.",
+      i = "Valid values are {.val {names(SUPPORT)}}."
+    ))
+  }
   if (is.null(support_type) || (!all(nzchar(support_type)))) {
-    support_type <- pick_codes(
-      SUPPORT,
-      "Select support type (if multiple were provided, create separate URLs for each).",
-      multiple = FALSE
-    )
+    support_type <- pick_codes(SUPPORT, "Select support type.")
     if (!all(nzchar(support_type))) {
       cli::cli_abort(c(x = "You must select a support type."))
     }
@@ -199,13 +202,13 @@ create_survey_url <- function(
 #' @returns A character vector of the selected codes.
 #' @dev
 
-pick_codes <- function(dict, title, multiple = FALSE) {
+pick_codes <- function(dict, title) {
   if (isFALSE(rlang::is_interactive())) {
     cli::cli_abort(
       c(x = "Missing required value for {title} in non-interactive session.")
     )
   }
-  sel <- utils::select.list(unname(dict), title = title, multiple = multiple)
+  sel <- utils::select.list(unname(dict), title = title, multiple = FALSE)
   if (!any(nzchar(sel))) {
     return(character())
   }
