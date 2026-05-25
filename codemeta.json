@@ -6,6 +6,7 @@
   "name": "AAGISurvey: Create AAGI Survey URLs and Analyse AAGI Survey Results",
   "relatedLink": "https://AAGI-AUS.github.io/AAGISurvey",
   "codeRepository": "https://github.com/aagi-aus/AAGISurvey",
+  "issueTracker": "https://github.com/AAGI-AUS/AAGISurvey/issues",
   "license": "https://spdx.org/licenses/MIT",
   "version": "0.0.3",
   "programmingLanguage": {
@@ -128,9 +129,12 @@
     },
     "SystemRequirements": null
   },
-  "fileSize": "350.256KB",
+  "applicationCategory": "Tools",
+  "isPartOf": "https://grdc.com.au/research/partnerships-and-initiatives/strategic-partnerships/aagi",
+  "fileSize": "44.355KB",
   "releaseNotes": "https://github.com/aagi-aus/AAGISurvey/blob/main/NEWS.md",
   "readme": "https://github.com/AAGI-AUS/AAGISurvey/blob/main/README.md",
   "contIntegration": "https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml",
+  "developmentStatus": "https://www.repostatus.org/#active",
   "keywords": "r"
 }

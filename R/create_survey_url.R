@@ -16,9 +16,8 @@
 #' through each field.
 #'
 #'
-#' @param support_type Character vector specifying the type(s) of support being
-#' evaluated.
-#' You may choose one or both.
+#' @param support_type Character string specifying the type of support being
+#' evaluated. You must choose one.
 #' Options are:
 #'   \describe{
 #'     \item{"S_D"}{Experimental design support}
@@ -26,7 +25,8 @@
 #'   }
 #'
 #' @param design_type Character string specifying the type of experimental
-#' design (required if "S_D" is selected for `support_type`).
+#' design (required if "S_D" is selected for `support_type`). You must choose
+#' one.'
 #' Options are:
 #'   \describe{
 #'     \item{"D_SP"}{Small plot trial design}
@@ -54,9 +54,12 @@
 #'
 #' @param aagi_node Character string of AAGI node. Options are:
 #'   \describe{
-#'     \item{"CU"}{Curtin University}
+#'     \item{"ANU"}{Australian National University}
 #'     \item{"AU"}{Adelaide University}
+#'     \item{"CU"}{Curtin University}
+#'     \item{"QDPI"}{Queensland Department of Primary Industries}
 #'     \item{"UQ"}{University of Queensland}
+#'     \item{"UWA"}{University of Western Australia}
 #'   }
 #'
 #' @param organisation_type Character string of organisation type. Options are:
@@ -72,13 +75,12 @@
 #'
 #' @examplesIf interactive()
 #' # create a survey URL for
-#' # - a small plot trial design & analysis
+#' # - a small plot trial design
 #' # - for a government agency or department
-#' # - performed by CU
+#' # - performed by Curtin node
 #' create_survey_url(
-#'   support_type = c("S_D", "S_A"),
+#'   support_type = "S_D",
 #'   design_type = "D_SP",
-#'   analysis_type = "A_SP",
 #'   aagi_node = "CU",
 #'   organisation_type = "O_GOV"
 #' )
@@ -86,19 +88,21 @@
 #' # create a survey URL for
 #' # - a bioinformatics analysis
 #' # - for an academic institution
-#' # - performed by UA
+#' # - performed by Adelaide University node
 #' create_survey_url(
 #'   support_type = "S_A",
 #'   analysis_type = "A_BIO",
-#'   aagi_node = "UA",
+#'   aagi_node = "AU",
 #'   organisation_type = "O_ACA"
 #' )
 #' @author Rose Megirian, \email{rose.megirian@@curtin.edu.au} and Adam H.
 #'  Sparks, \email{adam.sparks@@curtin.edu.au}
+#'
 #' @returns Once the relevant information has been provided, the
 #' function returns the completed survey URL, prints a short summary of the
 #' details you supplied and copies the URL to your operating system clipboard
 #' for inclusion in an email or other communication.
+#'
 #' @autoglobal
 #' @export
 
@@ -109,42 +113,6 @@ create_survey_url <- function(
   aagi_node = NULL,
   organisation_type = NULL
 ) {
-  # ---- Constants ----
-  SUPPORT <- c(S_D = "Experimental design support", S_A = "Analysis support")
-  DESIGN <- c(
-    D_SP = "Small plot trial design",
-    D_OFE = "On farm experiment design",
-    D_GH = "Glasshouse experiment design",
-    D_GC = "Growth chamber experiment design",
-    D_LAB = "Lab experiment design",
-    D_OTHER = "Other (recipient selects)"
-  )
-  ANALYSIS <- c(
-    A_SP = "Small plot trial data analysis",
-    A_OFE = "On farm experiment data analysis",
-    A_PRO = "Protected environment experiment data analysis",
-    A_BIO = "Bioinformatics or genetic data",
-    A_BRE = "Breeding or selection program data",
-    A_ENV = "Environmental or geospatial data",
-    A_IMG = "Imagery data",
-    A_REC = "Farm records or monitoring data",
-    A_OTHER = "Other (recipient selects)"
-  )
-  NODE <- c(
-    CU = "Curtin University",
-    UA = "Adelaide University",
-    UQ = "University of Queensland"
-  )
-  ORG <- c(
-    O_GRO = "Grower group / industry association / cooperative",
-    O_AGR = "Agronomy or farm advisory practice",
-    O_ACA = "Academic institution",
-    O_GOV = "Government agency or department",
-    O_BRE = "Seed or breeding company",
-    O_TEC = "Tech, biotech, or chemical company",
-    O_OTHER = "Other"
-  )
-
   # ---- Validate inputs ----
   ensure_valid(support_type, SUPPORT, "support_type")
   ensure_valid(design_type, DESIGN, "design_type")
@@ -153,14 +121,16 @@ create_survey_url <- function(
   ensure_valid(organisation_type, ORG, "organisation_type")
 
   # ---- Interactive prompts for missing ----
+  if (!is.null(support_type) && length(support_type) > 1) {
+    cli::cli_abort(c(
+      x = "Only one support type may be selected.",
+      i = "Valid values are {.val {names(SUPPORT)}}."
+    ))
+  }
   if (is.null(support_type) || (!all(nzchar(support_type)))) {
-    support_type <- pick_codes(
-      SUPPORT,
-      "Select support type(s)",
-      multiple = TRUE
-    )
+    support_type <- pick_codes(SUPPORT, "Select support type.")
     if (!all(nzchar(support_type))) {
-      cli::cli_abort("You must select at least one support type.")
+      cli::cli_abort(c(x = "You must select a support type."))
     }
   }
   if ("S_D" %in% support_type && is.null(design_type)) {
@@ -192,7 +162,7 @@ create_survey_url <- function(
   cli::cli_text(survey_url)
   cli::cli_h2("Selections")
   cli::cli_par(
-    "Support type{?s}: {SUPPORT[support_type]}"
+    "Support type: {SUPPORT[support_type]}"
   )
   cli::cli_text(
     "Design type: {ifelse(nzchar(design_type), DESIGN[[design_type]],
@@ -204,14 +174,14 @@ create_survey_url <- function(
   )
   cli::cli_text("AAGI node: {NODE[[aagi_node]]}")
   cli::cli_text("Organisation type: {ORG[[organisation_type]]}")
-  if (length(support_type) > 1L) {
-    cli::cli_alert_info("You selected more than one support type.")
+  if (length(support_type) != 1) {
+    cli::cli_abort(c(x = "You selected more than one support type."))
   }
   cli::cli_end()
   cli::cli_par()
   cli::cli_text(
-    "Best practice: send a survey 7-10 days after each set of outputs rather
-     than combining feedback."
+    "Best practice: deliver your customised survey link in the same email as the
+    output it relates to."
   )
   cli::cli_end()
   cli::cli_par()
@@ -232,13 +202,13 @@ create_survey_url <- function(
 #' @returns A character vector of the selected codes.
 #' @dev
 
-pick_codes <- function(dict, title, multiple = FALSE) {
+pick_codes <- function(dict, title) {
   if (isFALSE(rlang::is_interactive())) {
     cli::cli_abort(
-      "Missing required value for {title} in non-interactive session."
+      c(x = "Missing required value for {title} in non-interactive session.")
     )
   }
-  sel <- utils::select.list(unname(dict), title = title, multiple = multiple)
+  sel <- utils::select.list(unname(dict), title = title, multiple = FALSE)
   if (!any(nzchar(sel))) {
     return(character())
   }
@@ -262,55 +232,8 @@ ensure_valid <- function(vals, allowed, field) {
   bad <- setdiff(vals, names(allowed))
   if (length(bad)) {
     cli::cli_abort(
-      "Invalid {field}: {bad}"
+      c(x = "Invalid {field}: {bad}")
     )
   }
   return(invisible(NULL))
-}
-
-#' Create the URL string from user provided values
-#'
-#' Create the URL string from user provided values for returning to the user.
-#'
-#' @param base Character string of base URL.
-#' @param support_type Character vector of support types.
-#' @param design_type Character string of design type.
-#' @param analysis_type Character string of analysis type.
-#' @param aagi_node Character string of AAGI node.
-#' @param organisation_type Character string of organisation type.
-#'
-#' @examples
-#' build_url(
-#'   "https://curtin.au1.qualtrics.com/jfe/form/SV_eXLvfgMz58RktQa",
-#'   "S_D",
-#'   "D_SP",
-#'   "CU",
-#'   "O_ACA"
-#' )
-#'
-#' @dev
-#' @returns The full URL string.
-
-build_url <- function(
-  base,
-  support_type,
-  design_type,
-  analysis_type,
-  aagi_node,
-  organisation_type
-) {
-  params <- list(
-    ST = paste(support_type, collapse = ","),
-    DT = design_type %||% "",
-    AT = analysis_type %||% "",
-    AN = aagi_node %||% "",
-    OT = organisation_type %||% ""
-  )
-  query <- paste(
-    names(params),
-    vapply(params, utils::URLencode, character(1L), reserved = TRUE),
-    sep = "=",
-    collapse = "&"
-  )
-  sprintf("%s?%s", base, query)
 }

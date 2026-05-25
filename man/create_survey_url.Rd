@@ -13,9 +13,8 @@ create_survey_url(
 )
 }
 \arguments{
-\item{support_type}{Character vector specifying the type(s) of support being
-evaluated.
-You may choose one or both.
+\item{support_type}{Character string specifying the type of support being
+evaluated. You must choose one.
 Options are:
 \describe{
 \item{"S_D"}{Experimental design support}
@@ -23,7 +22,8 @@ Options are:
 }}
 
 \item{design_type}{Character string specifying the type of experimental
-design (required if "S_D" is selected for \code{support_type}).
+design (required if "S_D" is selected for \code{support_type}). You must choose
+one.'
 Options are:
 \describe{
 \item{"D_SP"}{Small plot trial design}
@@ -51,9 +51,12 @@ Options are:
 
 \item{aagi_node}{Character string of AAGI node. Options are:
 \describe{
-\item{"CU"}{Curtin University}
+\item{"ANU"}{Australian National University}
 \item{"AU"}{Adelaide University}
+\item{"CU"}{Curtin University}
+\item{"QDPI"}{Queensland Department of Primary Industries}
 \item{"UQ"}{University of Queensland}
+\item{"UWA"}{University of Western Australia}
 }}
 
 \item{organisation_type}{Character string of organisation type. Options are:
@@ -92,13 +95,12 @@ through each field.
 \examples{
 \dontshow{if (interactive()) withAutoprint(\{ # examplesIf}
 # create a survey URL for
-# - a small plot trial design & analysis
+# - a small plot trial design
 # - for a government agency or department
-# - performed by CU
+# - performed by Curtin node
 create_survey_url(
-  support_type = c("S_D", "S_A"),
+  support_type = "S_D",
   design_type = "D_SP",
-  analysis_type = "A_SP",
   aagi_node = "CU",
   organisation_type = "O_GOV"
 )
@@ -106,11 +108,11 @@ create_survey_url(
 # create a survey URL for
 # - a bioinformatics analysis
 # - for an academic institution
-# - performed by UA
+# - performed by Adelaide University node
 create_survey_url(
   support_type = "S_A",
   analysis_type = "A_BIO",
-  aagi_node = "UA",
+  aagi_node = "AU",
   organisation_type = "O_ACA"
 )
 \dontshow{\}) # examplesIf}

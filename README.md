@@ -2,8 +2,7 @@
 
 <!-- badges: start -->
 
-[![R-CMD-check](https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml)
-
+[![R-CMD-check](https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/AAGI-AUS/AAGISurvey/actions/workflows/R-CMD-check.yaml)[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://www.repostatus.org/badges/latest/active.svg)](https://www.repostatus.org/#active)
 <!-- badges: end -->
 
 ## Installation instructions
@@ -45,6 +44,13 @@ library(AAGISurvey)
 create_survey_url()
 ```
 
+## Shiny app 
+
+If you prefer a more refined interface, a Shiny app is available.
+See [{AAGISurveyApp}](https://github.com/AAGI-AUS/AAGISurveyApp) for this.
+If you do not have {AAGISurvey} installed, it will be installed when you install {AAGISurveyApp}.
+
+
 ## Contributions
 
 All contributions are appreciated, but please make sure to follow the [Contribution Guidelines](.github/CONTRIBUTING.md).
@@ -65,7 +71,7 @@ All contributions are appreciated, but please make sure to follow the [Contribut
 
 3. Make some edits to the .R files in the R/ directory.
 
-4. Test your changes by running:
+1. Test your changes by running:
 
    ```r
    devtools::load_all()
@@ -73,20 +79,20 @@ All contributions are appreciated, but please make sure to follow the [Contribut
 
    and testing your new functionality.
 
-5. If you are adding new functions, make sure to document them using Roxygen2 comments and generate the documentation with:
+2. If you are adding new functions, make sure to document them using Roxygen2 comments and generate the documentation with:
 
    ```r
    devtools::document()
    ```
 
-6. When you are satisfied with your changes, commit them to your local repository:
+3. When you are satisfied with your changes, commit them to your local repository:
 
    ```bash
    git add .
    git commit -m "Describe your changes here"
    ```
 
-7. Push your changes to the repository:
+4. Push your changes to the repository:
 
    ```bash
    git push

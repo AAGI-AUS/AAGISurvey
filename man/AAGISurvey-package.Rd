@@ -13,6 +13,7 @@ Useful links:
 \itemize{
   \item \url{https://AAGI-AUS.github.io/AAGISurvey}
   \item \url{https://github.com/aagi-aus/AAGISurvey}
+  \item Report bugs at \url{https://github.com/AAGI-AUS/AAGISurvey/issues}
 }
 
 }
