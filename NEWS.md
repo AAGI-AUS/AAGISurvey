@@ -1,14 +1,15 @@
 
-# AAGISurvey 0.0.4
+# AAGISurvey 1.0.0
+
+## Major changes
+
+* Users can no longer select more than one service type.
+* `build_url()` is exported for {AAGISurveyApp} to use.
 
 ## Minor changes
 
 * Add ANU, QDPI and UWA to nodes.
 * Updates text prompts for clarity.
-
-## Breaking changes
-
-* Users can no longer select more than one service type.
 
 ## Bug fixes
 
