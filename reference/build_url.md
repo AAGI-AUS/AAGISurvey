@@ -24,7 +24,7 @@ build_url(
 
 - support_type:
 
-  Character vector of support types.
+  Character string of support type.
 
 - design_type:
 
@@ -50,11 +50,12 @@ The full URL string.
 
 ``` r
 build_url(
-  "https://curtin.au1.qualtrics.com/jfe/form/SV_eXLvfgMz58RktQa",
-  "S_D",
-  "D_SP",
-  "CU",
-  "O_ACA"
+  base = "https://curtin.au1.qualtrics.com/jfe/form/SV_eXLvfgMz58RktQa",
+  support_type = "S_D",
+  design_type = "D_SP",
+  analysis_type = "A_BIO",
+  aagi_node = "CU",
+  organisation_type = "O_ACA"
 )
-#> Error in build_url("https://curtin.au1.qualtrics.com/jfe/form/SV_eXLvfgMz58RktQa",     "S_D", "D_SP", "CU", "O_ACA"): could not find function "build_url"
+#> [1] "https://curtin.au1.qualtrics.com/jfe/form/SV_eXLvfgMz58RktQa?ST=S_D&DT=D_SP&AT=A_BIO&AN=CU&OT=O_ACA"
 ```

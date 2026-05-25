@@ -52,6 +52,13 @@ library(AAGISurvey)
 create_survey_url()
 ```
 
+## Shiny app
+
+If you prefer a more refined interface, a Shiny app is available. See
+[{AAGISurveyApp}](https://github.com/AAGI-AUS/AAGISurveyApp) for this.
+If you do not have {AAGISurvey} installed, it will be installed when you
+install {AAGISurveyApp}.
+
 ## Contributions
 
 All contributions are appreciated, but please make sure to follow the

@@ -52,6 +52,13 @@ library(AAGISurvey)
 create_survey_url()
 ```
 
+## Shiny app
+
+If you prefer a more refined interface, a Shiny app is available. See
+[{AAGISurveyApp}](https://github.com/AAGI-AUS/AAGISurveyApp) for this.
+If you do not have {AAGISurvey} installed, it will be installed when you
+install {AAGISurveyApp}.
+
 ## Contributions
 
 All contributions are appreciated, but please make sure to follow the
@@ -109,6 +116,8 @@ Guidelines](https://AAGI-AUS.github.io/AAGISurvey/CONTRIBUTING.md).
 
 ## All functions
 
+- [`build_url()`](https://AAGI-AUS.github.io/AAGISurvey/reference/build_url.md)
+  : Create the URL string from user provided values
 - [`create_survey_url()`](https://AAGI-AUS.github.io/AAGISurvey/reference/create_survey_url.md)
   : Create an AAGI Survey URL
 

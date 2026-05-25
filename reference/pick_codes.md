@@ -6,7 +6,7 @@ response if they are not.
 ## Usage
 
 ``` r
-pick_codes(dict, title, multiple = FALSE)
+pick_codes(dict, title)
 ```
 
 ## Value

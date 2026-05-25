@@ -29,7 +29,7 @@ function, you first need to enable the AAGI R Universe in your R
 session. You only need to do this once. If you have already enabled the
 AAGI R Universe for another package, you can skip steps 1 & 2 and jump
 straight to [Step 3. Load the
-package](https://AAGI-AUS.github.io/AAGISurvey/articles/link_generation_guide.qmd#Step%203:%20Load%20the%20package).
+package](#Step%203:%20Load%20the%20package).
 
 ``` r
 
@@ -132,14 +132,14 @@ are meaningfully affected by how and when a survey is distributed
 the output rather than in a separate follow-up addresses several of
 these factors directly: the email comes from someone the recipient
 already has a working relationship with, which research shows
-meaningfully increases response rates ([Ericson 2023](#ref-Ericson2023);
-[Millar et al. 2021](#ref-Millar2021)); the request is contextually tied
-to a specific piece of work rather than arriving as a generic follow-up;
-and collaborators can respond while the experience is fresh without
-being asked to recall details later. Reducing the number of separate
-communications also lowers the friction that is well-documented as a
-contributor to survey non-response ([Dillman et al.
-2014](#ref-Dillman2014)).
+meaningfully increases response rates ([Ericson et al.
+2023](#ref-Ericson2023); [Millar et al. 2021](#ref-Millar2021)); the
+request is contextually tied to a specific piece of work rather than
+arriving as a generic follow-up; and collaborators can respond while the
+experience is fresh without being asked to recall details later.
+Reducing the number of separate communications also lowers the friction
+that is well-documented as a contributor to survey non-response
+([Dillman et al. 2014](#ref-Dillman2014)).
 
 When adding the link to your email, make sure to:
 
@@ -172,7 +172,7 @@ When adding the link to your email, make sure to:
 
 After sending the email, save a copy in the ‘Correspondence’ folder of
 the associated collaboration project. This ensures a record is
-maintained for future reference and accountability.  
+maintained for future reference and accountability.
 
 ## Further Information
 
@@ -190,8 +190,8 @@ collaborators over time.
 
 ### About the Survey Design
 
-The survey was designed with data quality as the primary consideration,
-though what quality means for this kind of data differs in important
+The survey was designed with data quality as the primary consideration.
+Though what quality means for this kind of data differs in important
 ways from how it is defined for objective or directly measured
 quantities, and is worth briefly unpacking.
 
@@ -246,11 +246,6 @@ tight and reputations travel, it has consequences that extend beyond a
 single survey to shape how future participation, and future researchers,
 are received.
 
-For those interested, these principles and the behavioural and
-methodological evidence behind them are explored in depth in
-[Behaviourally-Informed Survey Design: A Methodological
-Guide](https://AAGI-AUS.github.io/AAGISurvey/behaviourally_informed_survey_design/behaviourally_informed_survey_design.qmd).
-
 ### Closing the Loop
 
 Because the value of this survey depends as much on what we do with the
@@ -277,9 +272,10 @@ Dillman, Don A., Jolene D. Smyth, and Leah Melani Christian. 2014.
 *Internet, Phone, Mail, and Mixed-Mode Surveys: The Tailored Design
 Method*. 4th ed. John Wiley & Sons.
 
-Ericson, Bonick, A. 2023. “Optimizing Survey Response Rates in Graduate
-Medical Education Research Studies.” *Family Medicine* 55 (5): 304–10.
-https://doi.org/<https://doi.org/10.22454/FamMed.2023.750371>.
+Ericson, A., K. Bonick, L. A. Green, C. Conry, J. C. Martin, and P. A. &
+Carney. 2023. “Optimizing Survey Response Rates in Graduate Medical
+Education Research Studies.” *Family Medicine* 55 (5): 304–10.
+<https://doi.org/10.22454/FamMed.2023.750371>.
 
 Groves, Robert M., Eleanor Singer, and Amy Corning. 2000.
 “Leverage-Saliency Theory of Survey Participation: Description and an

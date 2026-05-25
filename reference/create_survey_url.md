@@ -25,8 +25,8 @@ create_survey_url(
 
 - support_type:
 
-  Character vector specifying the type(s) of support being evaluated.
-  You may choose one or both. Options are:
+  Character string specifying the type of support being evaluated. You
+  must choose one. Options are:
 
   "S_D"
 
@@ -39,7 +39,8 @@ create_survey_url(
 - design_type:
 
   Character string specifying the type of experimental design (required
-  if "S_D" is selected for `support_type`). Options are:
+  if "S_D" is selected for `support_type`). You must choose one.'
+  Options are:
 
   "D_SP"
 
@@ -111,17 +112,29 @@ create_survey_url(
 
   Character string of AAGI node. Options are:
 
-  "CU"
+  "ANU"
 
-  :   Curtin University
+  :   Australian National University
 
   "AU"
 
   :   Adelaide University
 
+  "CU"
+
+  :   Curtin University
+
+  "QDPI"
+
+  :   Queensland Department of Primary Industries
+
   "UQ"
 
   :   University of Queensland
+
+  "UWA"
+
+  :   University of Western Australia
 
 - organisation_type:
 
@@ -179,13 +192,12 @@ Rose Megirian, <rose.megirian@curtin.edu.au> and Adam H. Sparks,
 ``` r
 if (FALSE) { # interactive()
 # create a survey URL for
-# - a small plot trial design & analysis
+# - a small plot trial design
 # - for a government agency or department
-# - performed by CU
+# - performed by Curtin node
 create_survey_url(
-  support_type = c("S_D", "S_A"),
+  support_type = "S_D",
   design_type = "D_SP",
-  analysis_type = "A_SP",
   aagi_node = "CU",
   organisation_type = "O_GOV"
 )
@@ -193,11 +205,11 @@ create_survey_url(
 # create a survey URL for
 # - a bioinformatics analysis
 # - for an academic institution
-# - performed by UA
+# - performed by Adelaide University node
 create_survey_url(
   support_type = "S_A",
   analysis_type = "A_BIO",
-  aagi_node = "UA",
+  aagi_node = "AU",
   organisation_type = "O_ACA"
 )
 }

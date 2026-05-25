@@ -11,6 +11,8 @@ Useful links:
 
 - <https://github.com/aagi-aus/AAGISurvey>
 
+- Report bugs at <https://github.com/AAGI-AUS/AAGISurvey/issues>
+
 ## Author
 
 **Maintainer**: Adam Sparks <adam.sparks@curtin.edu.au>

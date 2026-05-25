@@ -34,7 +34,7 @@ relevant contextual information."></head><body>
 <li class="nav-item"><a class="nav-link" href="../news/index.html">Changelog</a></li>
       </ul><ul class="navbar-nav"><li class="nav-item"><form class="form-inline" role="search">
  <input class="form-control" type="search" name="search-input" id="search-input" autocomplete="off" aria-label="Search site" placeholder="Search for" data-search-index="../search.json"></form></li>
-<li class="nav-item"><a class="external-link nav-link" href="https://github.com/aagi-aus/AAGISurvey/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
+<li class="nav-item"><a class="external-link nav-link" href="https://github.com/AAGI-AUS/AAGISurvey/" aria-label="GitHub"><span class="fa fab fa-github fa-lg"></span></a></li>
       </ul></div>
 
 
@@ -44,7 +44,7 @@ relevant contextual information."></head><body>
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Create an AAGI Survey URL</h1>
-      <small class="dont-index">Source: <a href="https://github.com/aagi-aus/AAGISurvey/blob/v0.0.3/R/create_survey_url.R" class="external-link"><code>R/create_survey_url.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/AAGI-AUS/AAGISurvey/blob/main/R/create_survey_url.R" class="external-link"><code>R/create_survey_url.R</code></a></small>
       <div class="d-none name"><code>create_survey_url.Rd</code></div>
     </div>
 
@@ -75,9 +75,8 @@ relevant contextual information.</p>
 
 
 <dl><dt id="arg-support-type">support_type<a class="anchor" aria-label="anchor" href="#arg-support-type"></a></dt>
-<dd><p>Character vector specifying the type(s) of support being
-evaluated.
-You may choose one or both.
+<dd><p>Character string specifying the type of support being
+evaluated. You must choose one.
 Options are:</p><dl><dt>"S_D"</dt>
 <dd><p>Experimental design support</p></dd>
 
@@ -90,7 +89,8 @@ Options are:</p><dl><dt>"S_D"</dt>
 
 <dt id="arg-design-type">design_type<a class="anchor" aria-label="anchor" href="#arg-design-type"></a></dt>
 <dd><p>Character string specifying the type of experimental
-design (required if "S_D" is selected for <code>support_type</code>).
+design (required if "S_D" is selected for <code>support_type</code>). You must choose
+one.'
 Options are:</p><dl><dt>"D_SP"</dt>
 <dd><p>Small plot trial design</p></dd>
 
@@ -148,14 +148,23 @@ Options are:</p><dl><dt>"D_SP"</dt>
 
 
 <dt id="arg-aagi-node">aagi_node<a class="anchor" aria-label="anchor" href="#arg-aagi-node"></a></dt>
-<dd><p>Character string of AAGI node. Options are:</p><dl><dt>"CU"</dt>
-<dd><p>Curtin University</p></dd>
+<dd><p>Character string of AAGI node. Options are:</p><dl><dt>"ANU"</dt>
+<dd><p>Australian National University</p></dd>
 
 <dt>"AU"</dt>
 <dd><p>Adelaide University</p></dd>
 
+<dt>"CU"</dt>
+<dd><p>Curtin University</p></dd>
+
+<dt>"QDPI"</dt>
+<dd><p>Queensland Department of Primary Industries</p></dd>
+
 <dt>"UQ"</dt>
 <dd><p>University of Queensland</p></dd>
+
+<dt>"UWA"</dt>
+<dd><p>University of Western Australia</p></dd>
 
 
 </dl></dd>
@@ -211,13 +220,12 @@ Sparks, <a href="mailto:adam.sparks@curtin.edu.au">adam.sparks@curtin.edu.au</a>
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># interactive()</span></span></span>
 <span class="r-in"><span><span class="co"># create a survey URL for</span></span></span>
-<span class="r-in"><span><span class="co"># - a small plot trial design &amp; analysis</span></span></span>
+<span class="r-in"><span><span class="co"># - a small plot trial design</span></span></span>
 <span class="r-in"><span><span class="co"># - for a government agency or department</span></span></span>
-<span class="r-in"><span><span class="co"># - performed by CU</span></span></span>
+<span class="r-in"><span><span class="co"># - performed by Curtin node</span></span></span>
 <span class="r-in"><span><span class="fu">create_survey_url</span><span class="op">(</span></span></span>
-<span class="r-in"><span>  support_type <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"S_D"</span>, <span class="st">"S_A"</span><span class="op">)</span>,</span></span>
+<span class="r-in"><span>  support_type <span class="op">=</span> <span class="st">"S_D"</span>,</span></span>
 <span class="r-in"><span>  design_type <span class="op">=</span> <span class="st">"D_SP"</span>,</span></span>
-<span class="r-in"><span>  analysis_type <span class="op">=</span> <span class="st">"A_SP"</span>,</span></span>
 <span class="r-in"><span>  aagi_node <span class="op">=</span> <span class="st">"CU"</span>,</span></span>
 <span class="r-in"><span>  organisation_type <span class="op">=</span> <span class="st">"O_GOV"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
@@ -225,11 +233,11 @@ Sparks, <a href="mailto:adam.sparks@curtin.edu.au">adam.sparks@curtin.edu.au</a>
 <span class="r-in"><span><span class="co"># create a survey URL for</span></span></span>
 <span class="r-in"><span><span class="co"># - a bioinformatics analysis</span></span></span>
 <span class="r-in"><span><span class="co"># - for an academic institution</span></span></span>
-<span class="r-in"><span><span class="co"># - performed by UA</span></span></span>
+<span class="r-in"><span><span class="co"># - performed by Adelaide University node</span></span></span>
 <span class="r-in"><span><span class="fu">create_survey_url</span><span class="op">(</span></span></span>
 <span class="r-in"><span>  support_type <span class="op">=</span> <span class="st">"S_A"</span>,</span></span>
 <span class="r-in"><span>  analysis_type <span class="op">=</span> <span class="st">"A_BIO"</span>,</span></span>
-<span class="r-in"><span>  aagi_node <span class="op">=</span> <span class="st">"UA"</span>,</span></span>
+<span class="r-in"><span>  aagi_node <span class="op">=</span> <span class="st">"AU"</span>,</span></span>
 <span class="r-in"><span>  organisation_type <span class="op">=</span> <span class="st">"O_ACA"</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="op">}</span></span></span>
