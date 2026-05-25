@@ -92,7 +92,7 @@ test_that("create_survey_url rejects multiple support types", {
         )
       )
     }),
-    "You selected more than one support type"
+    "Only one support type may be selected."
   )
 })
 
