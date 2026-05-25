@@ -10,7 +10,7 @@ Authors@R: c(
   )
 Description: Create 'AAGI' service and support survey URLs interactively
     or scripted for sharing with partners.
-License: GPL (>= 3)
+License: MIT
 URL: https://AAGI-AUS.github.io/AAGISurvey,
     https://github.com/aagi-aus/AAGISurvey
 BugReports: https://github.com/AAGI-AUS/AAGISurvey/issues
