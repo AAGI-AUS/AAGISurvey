@@ -15,16 +15,16 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/AAGI-AUS/AAGISurvey/blob/v1.0.0/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/AAGI-AUS/AAGISurvey/blob/main/DESCRIPTION)
 
 Megirian R, Sparks A (2026). *AAGISurvey: Create AAGI Survey URLs and
-Analyse AAGI Survey Results*. R package version 0.0.3,
+Analyse AAGI Survey Results*. R package version 1.0.1,
 <https://AAGI-AUS.github.io/AAGISurvey>.
 
     @Manual{,
       title = {AAGISurvey: Create AAGI Survey URLs and Analyse AAGI Survey Results},
       author = {Rose Megirian and Adam Sparks},
       year = {2026},
-      note = {R package version 0.0.3},
+      note = {R package version 1.0.1},
       url = {https://AAGI-AUS.github.io/AAGISurvey},
     }

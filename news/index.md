@@ -1,6 +1,11 @@
 # Changelog
 
-## AAGISurvey 0.0.4
+## AAGISurvey 1.0.1
+
+- Provide new URL for survey, necessary since the survey was moved from
+  Rose’s Curtin Qualtrics to Adam’s Curtin Qualtrics account.
+
+## AAGISurvey 1.0.0
 
 ### Minor changes
 
