@@ -1,6 +1,6 @@
 Package: AAGISurvey
 Title: Create AAGI Survey URLs and Analyse AAGI Survey Results
-Version: 0.0.3
+Version: 0.0.4
 Authors@R: c(
     person("Rose", "Megirian", , "rose.megirian@curtin.edu.au", role = "aut"),
     person("Adam", "Sparks", , "adam.sparks@curtin.edu.au", role = c("aut", "cre"),
@@ -25,7 +25,7 @@ Suggests:
 VignetteBuilder: 
     quarto
 Config/Needs/build: moodymudskipper/devtag
-Config/roxygen2/version: 8.0.0
+Config/roxygen2/version: 8.1.1
 Config/roxyglobals/filename: globals.R
 Config/roxyglobals/unique: FALSE
 Config/testthat/edition: 3
