@@ -1,3 +1,9 @@
+# AAGISurvey 2.0.1
+
+## Bug fix
+
+- Add missing Import for {withr}.
+
 # AAGISurvey 2.0.0
 
 ## Breaking changes
