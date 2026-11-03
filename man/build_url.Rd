@@ -5,17 +5,15 @@
 \title{Create the URL string from user provided values}
 \usage{
 build_url(
-  base,
   support_type,
   design_type,
   analysis_type,
   aagi_node,
-  organisation_type
+  organisation_type,
+  base = survey_base_url()
 )
 }
 \arguments{
-\item{base}{Character string of base URL.}
-
 \item{support_type}{Character string of support type.}
 
 \item{design_type}{Character string of design type.}
@@ -25,6 +23,8 @@ build_url(
 \item{aagi_node}{Character string of AAGI node.}
 
 \item{organisation_type}{Character string of organisation type.}
+
+\item{base}{Character string of base URL.}
 }
 \value{
 The full URL string.

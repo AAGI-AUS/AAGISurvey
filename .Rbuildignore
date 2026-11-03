@@ -12,5 +12,9 @@
 ^\.positai$
 ^\.claude$
 ^man/copy_to_clip\.Rd$
+^man/resolve_support_type\.Rd$
+^man/prompt_if_missing\.Rd$
+^man/label_for\.Rd$
+^man/print_survey_summary\.Rd$
 ^man/pick_codes\.Rd$
 ^man/ensure_valid\.Rd$
