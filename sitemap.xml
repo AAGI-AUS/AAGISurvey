@@ -15,6 +15,11 @@
 <url><loc>https://AAGI-AUS.github.io/AAGISurvey/reference/create_survey_url.html</loc></url>
 <url><loc>https://AAGI-AUS.github.io/AAGISurvey/reference/ensure_valid.html</loc></url>
 <url><loc>https://AAGI-AUS.github.io/AAGISurvey/reference/index.html</loc></url>
+<url><loc>https://AAGI-AUS.github.io/AAGISurvey/reference/label_for.html</loc></url>
 <url><loc>https://AAGI-AUS.github.io/AAGISurvey/reference/pick_codes.html</loc></url>
+<url><loc>https://AAGI-AUS.github.io/AAGISurvey/reference/print_survey_summary.html</loc></url>
+<url><loc>https://AAGI-AUS.github.io/AAGISurvey/reference/prompt_if_missing.html</loc></url>
+<url><loc>https://AAGI-AUS.github.io/AAGISurvey/reference/resolve_support_type.html</loc></url>
+<url><loc>https://AAGI-AUS.github.io/AAGISurvey/reference/survey_base_url.html</loc></url>
 </urlset>
 

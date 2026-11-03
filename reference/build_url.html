@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">AAGISurvey</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,7 +30,7 @@
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Create the URL string from user provided values</h1>
-      <small class="dont-index">Source: <a href="https://github.com/AAGI-AUS/AAGISurvey/blob/v1.0.1/R/build_url.R" class="external-link"><code>R/build_url.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/AAGI-AUS/AAGISurvey/blob/main/R/build_url.R" class="external-link"><code>R/build_url.R</code></a></small>
       <div class="d-none name"><code>build_url.Rd</code></div>
     </div>
 
@@ -41,12 +41,12 @@
     <div class="section level2">
     <h2 id="ref-usage">Usage<a class="anchor" aria-label="anchor" href="#ref-usage"></a></h2>
     <div class="sourceCode"><pre class="sourceCode r"><code><span><span class="fu">build_url</span><span class="op">(</span></span>
-<span>  <span class="va">base</span>,</span>
 <span>  <span class="va">support_type</span>,</span>
 <span>  <span class="va">design_type</span>,</span>
 <span>  <span class="va">analysis_type</span>,</span>
 <span>  <span class="va">aagi_node</span>,</span>
-<span>  <span class="va">organisation_type</span></span>
+<span>  <span class="va">organisation_type</span>,</span>
+<span>  base <span class="op">=</span> <span class="fu"><a href="survey_base_url.html">survey_base_url</a></span><span class="op">(</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
     </div>
 
@@ -54,11 +54,7 @@
     <h2 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h2>
 
 
-<dl><dt id="arg-base">base<a class="anchor" aria-label="anchor" href="#arg-base"></a></dt>
-<dd><p>Character string of base URL.</p></dd>
-
-
-<dt id="arg-support-type">support_type<a class="anchor" aria-label="anchor" href="#arg-support-type"></a></dt>
+<dl><dt id="arg-support-type">support_type<a class="anchor" aria-label="anchor" href="#arg-support-type"></a></dt>
 <dd><p>Character string of support type.</p></dd>
 
 
@@ -76,6 +72,10 @@
 
 <dt id="arg-organisation-type">organisation_type<a class="anchor" aria-label="anchor" href="#arg-organisation-type"></a></dt>
 <dd><p>Character string of organisation type.</p></dd>
+
+
+<dt id="arg-base">base<a class="anchor" aria-label="anchor" href="#arg-base"></a></dt>
+<dd><p>Character string of base URL.</p></dd>
 
 </dl></div>
     <div class="section level2">

@@ -7,20 +7,16 @@ user.
 
 ``` r
 build_url(
-  base,
   support_type,
   design_type,
   analysis_type,
   aagi_node,
-  organisation_type
+  organisation_type,
+  base = survey_base_url()
 )
 ```
 
 ## Arguments
-
-- base:
-
-  Character string of base URL.
 
 - support_type:
 
@@ -41,6 +37,10 @@ build_url(
 - organisation_type:
 
   Character string of organisation type.
+
+- base:
+
+  Character string of base URL.
 
 ## Value
 

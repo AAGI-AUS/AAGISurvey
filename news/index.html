@@ -7,7 +7,7 @@
 
     <a class="navbar-brand me-2" href="../index.html">AAGISurvey</a>
 
-    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">1.0.1</small>
+    <small class="nav-text text-muted me-auto" data-bs-toggle="tooltip" data-bs-placement="bottom" title="">2.0.0</small>
 
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar" aria-controls="navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -30,9 +30,34 @@
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Changelog</h1>
-      <small>Source: <a href="https://github.com/AAGI-AUS/AAGISurvey/blob/v1.0.1/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
+      <small>Source: <a href="https://github.com/AAGI-AUS/AAGISurvey/blob/main/NEWS.md" class="external-link"><code>NEWS.md</code></a></small>
     </div>
 
+    <div class="section level2">
+<h2 class="pkg-version" data-toc-text="2.0.0" id="aagisurvey-200">AAGISurvey 2.0.0<a class="anchor" aria-label="anchor" href="#aagisurvey-200"></a></h2>
+<div class="section level3">
+<h3 id="breaking-changes-2-0-0">Breaking changes<a class="anchor" aria-label="anchor" href="#breaking-changes-2-0-0"></a></h3>
+<ul><li>
+<code><a href="../reference/build_url.html">build_url()</a></code> now takes <code>base</code> as its last argument, and it is optional. Code that passed <code>base</code> as the first positional argument must now name it (<code>base = "https://..."</code>) or move it to the end.</li>
+</ul></div>
+<div class="section level3">
+<h3 id="new-features-2-0-0">New features<a class="anchor" aria-label="anchor" href="#new-features-2-0-0"></a></h3>
+<ul><li><p>New exported function <code><a href="../reference/survey_base_url.html">survey_base_url()</a></code> returns the base URL of the AAGI Qualtrics survey. The URL is now defined in one place (<code>SURVEY_BASE_URL</code> in <code>constants.R</code>), so dependent packages and apps, such as the Shiny app, can use it instead of hard coding their own copy.</p></li>
+<li><p><code><a href="../reference/build_url.html">build_url()</a></code> uses <code><a href="../reference/survey_base_url.html">survey_base_url()</a></code> as the default for <code>base</code>. <code><a href="../reference/create_survey_url.html">create_survey_url()</a></code> no longer hard codes the URL.</p></li>
+</ul></div>
+<div class="section level3">
+<h3 id="bug-fixes-2-0-0">Bug fixes<a class="anchor" aria-label="anchor" href="#bug-fixes-2-0-0"></a></h3>
+<ul><li><p><code><a href="../reference/create_survey_url.html">create_survey_url()</a></code> now prints the “Support type” line in its summary. It was never shown before.</p></li>
+<li><p><code><a href="../reference/create_survey_url.html">create_survey_url()</a></code> now shows <code>&lt;blank&gt;</code> in the summary for a design or analysis type that doesn’t apply. It previously showed nothing.</p></li>
+<li><p><code><a href="../reference/create_survey_url.html">create_survey_url()</a></code> now stops with “You must select a support type” if the support type menu is cancelled. Previously it carried on without a support type.</p></li>
+</ul></div>
+<div class="section level3">
+<h3 id="minor-improvements-and-internal-changes-2-0-0">Minor improvements and internal changes<a class="anchor" aria-label="anchor" href="#minor-improvements-and-internal-changes-2-0-0"></a></h3>
+<ul><li><p><code><a href="../reference/create_survey_url.html">create_survey_url()</a></code> was split into smaller internal helpers (<code><a href="../reference/resolve_support_type.html">resolve_support_type()</a></code>, <code><a href="../reference/prompt_if_missing.html">prompt_if_missing()</a></code>, <code><a href="../reference/label_for.html">label_for()</a></code> and <code><a href="../reference/print_survey_summary.html">print_survey_summary()</a></code>) to reduce its cyclomatic complexity. Its behaviour is unchanged apart from the fixes above.</p></li>
+<li><p>Added an internal <code>select_one()</code> wrapper around <code><a href="https://rdrr.io/r/utils/select.list.html" class="external-link">utils::select.list()</a></code> so the interactive menu can be mocked in tests.</p></li>
+<li><p>Expanded test coverage for <code><a href="../reference/build_url.html">build_url()</a></code>, <code><a href="../reference/create_survey_url.html">create_survey_url()</a></code>, <code><a href="../reference/copy_to_clip.html">copy_to_clip()</a></code> and <code><a href="../reference/survey_base_url.html">survey_base_url()</a></code>. The clipboard is now mocked, so tests no longer skip when no clipboard is available.</p></li>
+</ul></div>
+</div>
     <div class="section level2">
 <h2 class="pkg-version" data-toc-text="1.0.1" id="aagisurvey-101">AAGISurvey 1.0.1<a class="anchor" aria-label="anchor" href="#aagisurvey-101"></a></h2>
 <ul><li>Provide new URL for survey, necessary since the survey was moved from Rose’s Curtin Qualtrics to Adam’s Curtin Qualtrics account.</li>
