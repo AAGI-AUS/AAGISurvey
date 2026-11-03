@@ -23,12 +23,12 @@
 #' @returns The full URL string.
 
 build_url <- function(
-  base,
   support_type,
   design_type,
   analysis_type,
   aagi_node,
-  organisation_type
+  organisation_type,
+  base = survey_base_url()
 ) {
   params <- list(
     ST = paste(support_type, collapse = ","),

@@ -1,8 +1,12 @@
 # ---- Constants ----
+
+# Single source of truth for the survey base URL. Change it here only.
+SURVEY_BASE_URL <- "https://curtin.au1.qualtrics.com/jfe/form/SV_6xUesPlghPZuKlo"
+
 SUPPORT <- c(
-  S_D = "Experimental design support", 
+  S_D = "Experimental design support",
   S_A = "Analysis support"
-  )
+)
 
 DESIGN <- c(
   D_SP = "Small plot trial design",
